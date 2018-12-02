@@ -1,0 +1,256 @@
+
+/* h1 {
+  color: blue;ffff
+}
+
+p {
+  color: Green;
+} */
+
+body {
+  margin: 0;
+  /* background-image: url("images/Thunders.gif"); */
+  background-color: #cccccc;
+}
+
+#InnerDisplay {
+  display: block;
+  margin: auto;
+  background-color: Black;
+  width: 800px;
+  height:600px;
+  position:absolute;
+  z-index: -1;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin:auto;
+  /* max-width:100%;
+  max-height:100%; */
+  /* overflow:auto; */
+
+}
+
+#InnerDisplayHall {
+  display: block;
+  margin: auto;
+  background-color: Black;
+
+  background-image: url(images/b-o-w-qin-10.jpg);
+  background-repeat: no-repeat;
+
+  width: 800px;
+  height:600px;
+  position:absolute;
+  z-index: -1;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin:auto;
+  /* max-width:100%;
+  max-height:100%; */
+  /* overflow:auto; */
+
+}
+
+#lyrica {
+  width: 350px;
+  height: 600px;
+  float: right;
+}
+
+#lyricaOutside {
+  width: 450px;
+  height: 700px;
+  /* opacity: 0.0;
+  visibility: invisible; */
+}
+
+#MagicalButton {
+  background-color: #3D3E41;
+  color: White;
+  border: none;
+  cursor: pointer;
+  transition: 0.15s;
+  height: 50px;
+  width: 200px;
+  position: absolute;
+  left: 100px;
+  top: 275px;
+  border-radius: 10px;
+}
+
+#MagicalButton:hover {
+    box-shadow: 0 0px 50px 0 White;
+}
+
+#MagicalButton:focus {
+  outline:0;
+}
+
+#EvilLyrica {
+  float: right;
+  height: 728px;
+  position: relative;
+  z-index: 1;
+}
+
+#OuterChatDisplay {
+  width: 100%;
+  height: 250px;
+  /* background-color: White; */
+  position: absolute;
+  bottom: 0px;
+  z-index: 2;
+
+  background: linear-gradient(to top, rgba(214, 128, 128, 0.6), rgba(0,0,0,0)); /* (238, 232, 238, 0.6) */
+}
+
+.hidden {
+  display: none;
+}
+
+.unvisible {
+  visibility: hidden;
+}
+
+/* #ExempelText {
+  font-size: 3em;
+  font-family: monospace;
+  color: Red;
+  width: 1500px;
+  margin-top: 100px;
+  margin-left: 30px;
+  white-space: normal;
+} */
+
+.visible {
+  font-size: 3em;
+  font-family: monospace;
+  color: Red;
+  text-shadow: 2px 2px 5px #2f2a2a; /* #8a0808*/
+  width: 1500px;
+  /* margin-top: 100px; */
+  /* white-space: normal; */
+  top: 120px;
+  position: relative;
+  padding: 5px;
+  width: 1300px;
+  display: block;
+  left: 30px;
+}
+
+.invisible {
+    /* color: transparent; */
+    visibility: hidden;
+}
+
+#speakTo {
+  color: White;
+  font-style: oblique;
+  font-size: 2em;
+  top: 321px;
+  left: 679px;
+  position: absolute;
+  z-index: 3;
+}
+
+
+@keyframes glowing {
+  0% { box-shadow: 0 10 -10px #cc1616; }
+  20% { box-shadow: 0 5 0px #cc1616; }
+  40% { box-shadow: 0 0 20px #cc1616; }
+  60% { box-shadow: 0 0 20px #cc1616; }
+  80% { box-shadow: 0 5 0px #cc1616; }
+  100% { box-shadow: 0 10 -10px #cc1616; }
+
+  /* Original: */
+  /* 0% { box-shadow: 0 0 -10px #c4a300; }
+  40% { box-shadow: 0 0 20px #c4a300; }
+  60% { box-shadow: 0 0 20px #c4a300; }
+  100% { box-shadow: 0 0 -10px #c4a300; } */
+}
+
+.border-glow {
+  animation: glowing 5000ms infinite;
+}
+
+
+/******************/
+
+#RedEyes {
+  position: absolute;
+  width: 137px;
+  left: 560px;
+  top: 121px;
+  transform: rotate(10deg);
+
+  /* -webkit-animation-name: fade-in;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear; */
+
+  /* -webkit-animation-delay: 2s; */
+}
+
+/* @-webkit-keyframes fade-in {
+  0%   { opacity: 0; }
+  10%  { opacity: 0.2; }
+  20%  { opacity: 0.4; }
+  30%  { opacity: 0.6; }
+  40%  { opacity: 0.8; }
+  50%  { opacity: 1; }
+  60%  { opacity: 0.8; }
+  70%  { opacity: 0.6; }
+	80%  { opacity: 0.4; }
+  90%  { opacity: 0.2; }
+	100% { opacity: 0; }
+} */
+
+/******************/
+.secretDoorContainer {
+  width: 320px;
+  height: 320px;
+  height: auto;
+  position: relative;
+  top: 100px;
+  left: 80px;
+  filter: sepia(100%);
+  cursor: pointer;
+}
+
+/* .tooltip p {
+    display:none;
+}
+.tooltip:hover p {
+    display:block;
+    position:fixed;
+    overflow:hidden;
+} */
+
+.secretDoor {
+  /* width: 40%;
+  position: relative;
+  top: 100px;
+  left: 80px; */
+
+  width: 320px;
+  height: 320px;
+
+	/* filter: sepia(100%);
+  cursor: pointer; */
+}
+
+/* .coordinates {
+  position: absolute;
+  color: White;
+} */
+
+.textMouseCoordinates {
+  color: White;
+  font-family: monospace;
+  font-size: 2em;
+  width: 200px;
+}
