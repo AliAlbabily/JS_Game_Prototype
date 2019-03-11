@@ -254,3 +254,17 @@ body {
   font-size: 2em;
   width: 200px;
 }
+
+#monsterHand {
+  position: absolute;
+  width: 55%;
+  left: -55%;
+}
+
+#scaryBackground {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  /* background-color: rgba(255, 255, 255, 0.6); */
+}

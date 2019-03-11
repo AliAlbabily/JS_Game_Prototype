@@ -6,17 +6,17 @@
 								});
 
 	let keyPhrase = [];
- 
+
 
 	var redEyesSound = document.createElement("audio");
-	redEyesSound.src = "Panic-Mike_Koenig-717059030.mp3";
+	redEyesSound.src = "Sounds/Panic-Mike_Koenig-717059030.mp3";
 	redEyesSound.volume = 0.1;
 	redEyesSound.autoPlay = false;
 	redEyesSound.preLoad = true;
 	redEyesSound.controls = true;
 
 	var pathLockedSound = document.createElement("audio");
-	pathLockedSound.src = "lose sound 2 - 1_0.wav";
+	pathLockedSound.src = "Sounds/lose sound 2 - 1_0.wav";
 	pathLockedSound.volume = 0.1;
 	pathLockedSound.autoPlay = false;
 	pathLockedSound.preLoad = true;
@@ -59,11 +59,6 @@
 	  console.log(keyPhrase.join(''));
 
 	});
-
-
-	$("#RedEyes").hide();
-	$(".secretDoorContainer").hide();
-	$(".tooltip p").css("display", "none");
 
 
 	$(document).on("keyup", function(event) {
@@ -152,14 +147,19 @@
 	});
 
 
-	var tooltipP = document.getElementById('pId');
+	// var tooltipP = document.getElementById('pId');
+	//
+	// window.onmousemove = function (e) {
+  //   var x = e.clientX,
+  //       y = e.clientY;
+  //   tooltipP.style.top = (y + -255) + 'px';
+  //   tooltipP.style.left = (x + -430) +'px';
+	// };
 
-	window.onmousemove = function (e) {
-    var x = e.clientX,
-        y = e.clientY;
-    tooltipP.style.top = (y + -255) + 'px';
-    tooltipP.style.left = (x + -430) +'px';
-	};
+
+
+
+
 
 
 	// $('#lyrica').animate({opacity: 0.0, bottom: '100px'}, 2000, setInvisible);
