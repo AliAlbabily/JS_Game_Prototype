@@ -6,7 +6,7 @@ $(document).ready(function(){
       var lable = $("#MagicalButton").text();
 
       var obj = document.createElement("audio");
-      obj.src = "FX141.wav";
+      obj.src = "Sounds/FX141.wav";
       obj.volume = 0.1;
       obj.autoPlay = false;
       obj.preLoad = true;

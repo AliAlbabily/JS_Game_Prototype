@@ -45,9 +45,11 @@ class Room {
   showHand() {
     $(document).ready(function() {
       $(".secretDoor").on("click", function(){
+
         $("#monsterHand").animate({left: "-100"}, 1800);
 
         room.switchBackgroundColor();
+        room.switchBackgroundImage();
 
       });
     });
@@ -62,24 +64,33 @@ class Room {
 
 
     let i = 0;
-    let j = 0;
+    let counter = 0;
 
-    var playAnimation = setTimeout( function() {
-      setInterval( function() {
+    // let stopAnimation = 60;
+
+    var playAnimation = setInterval( function() {
         var colorList = ["rgba(199, 13, 0, 0.7)", "rgba(0, 0, 0, 0)"];
-        let doc = document.getElementById('scaryBackground');
+        let scaryBackground = document.getElementById('scaryBackground');
 
-        doc.style.backgroundColor = colorList[i];
+        scaryBackground.style.backgroundColor = colorList[i];
         i = (i + 1) % colorList.length;
 
-        if (j == 40) {
-          clearTimeout(playAnimation);
-          console.log("STOP!!");
+        counter++;
+        console.log(counter);
+
+        if (counter == 30) {
+          clearInterval(playAnimation);
+          console.log("Counter has stopped!" + counter);
+          scaryBackground.remove();
         }
 
       }, 50);
-    }, 0);
 
+  }
+
+
+  switchBackgroundImage() {
+    document.body.style.background = "#f3f3f3 url('images/redsea_wyb51czt.gif') no-repeat 100%";
   }
 
 }
