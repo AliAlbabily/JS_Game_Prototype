@@ -3,7 +3,7 @@ class Room {
 
   constructor( name ) {
     this.name = name;
-    // $("#RedEyes").hide();
+    this.yoralina = new Character("Yoralina");
   }
 
   scene1() {
@@ -30,8 +30,6 @@ class Room {
       var monsterHand = '<img src="images/MonsterHand.png" id="monsterHand" draggable="false">';
       $("body").append(monsterHand);
 
-
-
       $(".tooltip p").css("display", "none");
 
       $("#RedEyes").hide();
@@ -51,6 +49,8 @@ class Room {
         room.switchBackgroundColor();
         room.switchBackgroundImage();
 
+        room.yoralinaIsSpeaking();
+
       });
     });
     console.log("showHand() is working");
@@ -58,7 +58,6 @@ class Room {
 
 
   switchBackgroundColor() {
-
     var scaryBackground = '<div id="scaryBackground"></div>';
     $("body").append(scaryBackground);
 
@@ -87,6 +86,12 @@ class Room {
   switchBackgroundImage() {
     document.body.style.background = "#f3f3f3 url('images/redsea_wyb51czt.gif') no-repeat 100%";
     document.body.style.backgroundSize = "cover";
+  }
+
+
+  yoralinaIsSpeaking() {
+    // Accessing talk method from the Character class
+    this.yoralina.speak();
   }
 
 }

@@ -1,16 +1,18 @@
 
 class Character {
 
-  // let name;
-
   constructor( name ) {
     this.name = name;
   }
 
-  talk() {
-    console.log("text");
+  speak() {
+    console.log("hello... it's me.. Yoralina");
   }
+
+  getName() {
+    return this.name;
+  }
+
 }
 
-const yoralina = new Character("Yoralina");
-// yoralina.talk("haha");
+// const yoralina = new Character("Yoralina");
