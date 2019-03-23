@@ -62,11 +62,8 @@ class Room {
     var scaryBackground = '<div id="scaryBackground"></div>';
     $("body").append(scaryBackground);
 
-
     let i = 0;
     let counter = 0;
-
-    // let stopAnimation = 60;
 
     var playAnimation = setInterval( function() {
         var colorList = ["rgba(199, 13, 0, 0.7)", "rgba(0, 0, 0, 0)"];
@@ -83,14 +80,13 @@ class Room {
           console.log("Counter has stopped!" + counter);
           scaryBackground.remove();
         }
-
       }, 50);
-
   }
 
 
   switchBackgroundImage() {
     document.body.style.background = "#f3f3f3 url('images/redsea_wyb51czt.gif') no-repeat 100%";
+    document.body.style.backgroundSize = "cover";
   }
 
 }

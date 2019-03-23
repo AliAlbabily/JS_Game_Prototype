@@ -7,10 +7,10 @@ class Character {
     this.name = name;
   }
 
-  // speak() {
-  //   console.log("hello!");
-  // }
+  talk() {
+    console.log("text");
+  }
 }
 
 const yoralina = new Character("Yoralina");
-yoralina.speak;
+// yoralina.talk("haha");
