@@ -16,8 +16,9 @@ class Room {
       var secretPortal = '<img src="images/pic5abfb86bb2efe7_original_70089075.gif" class="secretDoor" draggable="false">';
       var secretDoorContainer = '<div class="secretDoorContainer tooltip"></div>';
       var textPortal = '<p class="textMouseCoordinates" id="pId">Enter the portal??</p>';
+      var speakingBubble = '<div class="speakingBubbleWrapper"><img src="images/speakingBubble.png" class="speakingBubble" draggable="false"></div>';
 
-      $("#InnerDisplayHall").append(roomName, imgYoralina, imgRedeyes, secretDoorContainer);
+      $("#InnerDisplayHall").append(roomName, imgYoralina, imgRedeyes, secretDoorContainer, speakingBubble);
       $(".secretDoorContainer").append(secretPortal, textPortal);
     });
 

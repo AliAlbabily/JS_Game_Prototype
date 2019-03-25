@@ -268,3 +268,17 @@ body {
   top: 0;
   /* background-color: rgba(255, 255, 255, 0.6); */
 }
+
+.speakingBubbleWrapper {
+  position: absolute;
+  z-index: 2;
+  left: 290px;
+  bottom: 320px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.speakingBubble {
+  transform: scaleX(-1);
+  width: 45%;
+}
