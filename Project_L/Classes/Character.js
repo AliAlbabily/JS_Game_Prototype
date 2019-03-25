@@ -5,8 +5,8 @@ class Character {
     this.name = name;
   }
 
-  speak() {
-    console.log("hello... it's me.. Yoralina");
+  speak(text) {
+    console.log(text);
   }
 
   getName() {

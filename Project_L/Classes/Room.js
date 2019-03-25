@@ -90,10 +90,16 @@ class Room {
 
 
   yoralinaIsSpeaking() {
-    // Accessing talk method from the Character class
-    this.yoralina.speak();
+    // Accessing speak()-method from the Character.js class
+    this.yoralina.speak(dialogs.dialog1);
   }
 
 }
+
+var dialogs = {
+  dialog1: "Wait... I need to tell you something before you enter that place...",
+  dialog2: "STOP RIGHT THERE!!",
+  dialog3: "Hej Monika!!"
+};
 
 const room = new Room("Hall");
