@@ -278,9 +278,15 @@ body {
   height: 250px;
   background-image: url('images/speakingBubble.png');
   background-repeat:no-repeat;
+  background-color: transparent;
 }
 
-/* .speakingBubble {
-  transform: scaleX(-1);
-  width: 45%;
-} */
+.speakingBubbleText {
+  position: absolute;
+  width: 215px;
+  top: 40px;
+  left: 20px;
+  color: White;
+  white-space: pre-line;
+  word-wrap: break-word;
+}

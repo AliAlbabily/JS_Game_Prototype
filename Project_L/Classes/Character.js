@@ -7,6 +7,7 @@ class Character {
 
   speak(text) {
     console.log(text);
+    $(".speakingBubbleText").text(text);
   }
 
   getName() {
@@ -14,5 +15,3 @@ class Character {
   }
 
 }
-
-// const yoralina = new Character("Yoralina");

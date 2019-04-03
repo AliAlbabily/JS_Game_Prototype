@@ -16,7 +16,7 @@ class Room {
       var secretPortal = '<img src="images/pic5abfb86bb2efe7_original_70089075.gif" class="secretDoor" draggable="false">';
       var secretDoorContainer = '<div class="secretDoorContainer tooltip"></div>';
       var textPortal = '<p class="textMouseCoordinates" id="pId">Enter the portal??</p>';
-      var speakingBubble = '<div class="speakingBubbleWrapper"></div>';
+      var speakingBubble = '<div class="speakingBubbleWrapper"><p class="speakingBubbleText"></p></div>';
 
       $("#InnerDisplayHall").append(roomName, imgYoralina, imgRedeyes, secretDoorContainer, speakingBubble);
       $(".secretDoorContainer").append(secretPortal, textPortal);
@@ -95,12 +95,14 @@ class Room {
     this.yoralina.speak(dialogs.dialog1);
   }
 
+
 }
 
 var dialogs = {
   dialog1: "Wait... I need to tell you something before you enter that place...",
   dialog2: "STOP RIGHT THERE!!",
-  dialog3: "Hej Monika!!"
+  dialog3: "Hej Monika!!",
+  dialog4: "Hello! My name is YoraLina and Im the headmaster of this place. So you should really know your place my dear..."
 };
 
 const room = new Room("Hall");
