@@ -274,11 +274,13 @@ body {
   z-index: 2;
   left: 290px;
   bottom: 320px;
-  width: fit-content;
-  height: fit-content;
+  width: 250px;
+  height: 250px;
+  background-image: url('images/speakingBubble.png');
+  background-repeat:no-repeat;
 }
 
-.speakingBubble {
+/* .speakingBubble {
   transform: scaleX(-1);
   width: 45%;
-}
+} */
