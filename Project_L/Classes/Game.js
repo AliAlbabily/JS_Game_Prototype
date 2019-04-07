@@ -11,6 +11,7 @@ class Game {
     this.rooms[0].scene1();
     this.rooms[0].hideObjects();
     this.rooms[0].portalIsClicked();
+    this.rooms[0].nextDialog();
   }
 
 }

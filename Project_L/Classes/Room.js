@@ -35,6 +35,8 @@ class Room {
 
       $("#RedEyes").hide();
       $(".secretDoorContainer").hide();
+
+      $(".speakingBubbleWrapper").addClass("hidden");
     });
 
     console.log("hideObjects() is working");
@@ -48,14 +50,14 @@ class Room {
         //Show the actual hand
         // room.showHand();
 
-        room.switchBackgroundColor();
+        // room.switchBackgroundColor();
         room.switchBackgroundImage();
 
-        room.yoralinaIsSpeaking();
+        room.yoralinaIsSpeaking(dialogs.dialog1);
 
       });
     });
-    console.log("showHand() is working");
+    console.log("portalIsClicked() is working");
   }
 
   showHand() {
@@ -95,19 +97,36 @@ class Room {
   }
 
 
-  yoralinaIsSpeaking() {
+  yoralinaIsSpeaking(text) {
+    $(".speakingBubbleWrapper").removeClass("hidden");
     // Accessing speak()-method from the Character.js class
-    this.yoralina.speak(dialogs.dialog1);
+    this.yoralina.speak(text);
+  }
+
+
+  nextDialog() {
+    $(document).ready(function() {
+      let index = 1;
+
+      $(".speakingBubbleWrapper").on("click", function(){
+        room.yoralinaIsSpeaking(dialogsValues[index]);
+        index++;
+      });
+    });
+    console.log("nextDialog() is working");
   }
 
 
 }
 
 var dialogs = {
-  dialog1: "Wait... I need to tell you something before you enter that place...",
-  dialog2: "STOP RIGHT THERE!!",
-  dialog3: "Hej Monika!!",
-  dialog4: "Hello! My name is YoraLina and Im the headmaster of this place. So you should really know your place my dear..."
+  dialog1: "STOP RIGHT THERE!!",
+  dialog2: "I need to tell you something before you enter that place...",
+  dialog3: "My name is YoraLina and I'm the headmaster of this place, so you should really know your place my dear...",
+  dialog4: "Now you may go ahead but don't forget to be careful out there..."
 };
+
+//Convert dialogs object to array of values
+const dialogsValues = Object.values(dialogs);
 
 const room = new Room("Hall");
