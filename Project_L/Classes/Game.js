@@ -4,7 +4,7 @@ class Game {
   constructor() {
     this.rooms = [];
     this.rooms.push( new Room("Hall") );
-    // this.enterFirstRoom();
+    this.enterFirstRoom();
   }
 
   enterFirstRoom() {
@@ -16,11 +16,9 @@ class Game {
 
 }
 
-// const yoralina = new Character("Yoralina");
-
 // Start the application (run the main method (e.g game-constructor))
 // new Game();
 
 
 const game = new Game();
-game.enterFirstRoom();
+// game.enterFirstRoom();

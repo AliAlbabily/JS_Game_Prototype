@@ -45,6 +45,7 @@ class Room {
     $(document).ready(function() {
       $(".secretDoor").on("click", function(){
 
+        //Show the actual hand
         $("#monsterHand").animate({left: "-100"}, 1800);
 
         room.switchBackgroundColor();
