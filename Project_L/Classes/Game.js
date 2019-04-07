@@ -10,8 +10,7 @@ class Game {
   enterFirstRoom() {
     this.rooms[0].scene1();
     this.rooms[0].hideObjects();
-    this.rooms[0].showHand();
-    // this.rooms[0].switchBackgroundColor();
+    this.rooms[0].portalIsClicked();
   }
 
 }

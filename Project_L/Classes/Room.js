@@ -41,12 +41,12 @@ class Room {
   }
 
 
-  showHand() {
+  portalIsClicked() {
     $(document).ready(function() {
       $(".secretDoor").on("click", function(){
 
         //Show the actual hand
-        $("#monsterHand").animate({left: "-100"}, 1800);
+        // room.showHand();
 
         room.switchBackgroundColor();
         room.switchBackgroundImage();
@@ -56,6 +56,10 @@ class Room {
       });
     });
     console.log("showHand() is working");
+  }
+
+  showHand() {
+    $("#monsterHand").animate({left: "-100"}, 1800);
   }
 
 
