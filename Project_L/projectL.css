@@ -289,4 +289,5 @@ body {
   color: White;
   white-space: pre-line;
   word-wrap: break-word;
+  user-select: none;
 }

@@ -109,8 +109,13 @@ class Room {
       let index = 1;
 
       $(".speakingBubbleWrapper").on("click", function(){
-        room.yoralinaIsSpeaking(dialogsValues[index]);
-        index++;
+        if( index >= dialogsValues.length )  {
+          $(".speakingBubbleWrapper").addClass("hidden");
+        }
+        else {
+          room.yoralinaIsSpeaking(dialogsValues[index]);
+          index++;
+        }
       });
     });
     console.log("nextDialog() is working");
@@ -126,7 +131,7 @@ var dialogs = {
   dialog4: "Now you may go ahead but don't forget to be careful out there..."
 };
 
-//Convert dialogs object to array of values
+//Convert dialogs-object to array of values
 const dialogsValues = Object.values(dialogs);
 
 const room = new Room("Hall");
