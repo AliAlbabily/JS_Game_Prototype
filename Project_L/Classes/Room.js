@@ -43,6 +43,12 @@ class Room {
   }
 
 
+  playSoundEffect(src) {
+    var audio = new Audio(`${src}`);
+    audio.play();
+  }
+
+
   portalIsClicked() {
     $(document).ready(function() {
       $(".secretDoor").on("click", function(){
@@ -113,6 +119,8 @@ class Room {
           $(".speakingBubbleWrapper").addClass("hidden");
         }
         else {
+          room.playSoundEffect("Sounds/MenuSelectionClick.wav");
+
           room.yoralinaIsSpeaking(dialogsValues[index]);
           index++;
         }
