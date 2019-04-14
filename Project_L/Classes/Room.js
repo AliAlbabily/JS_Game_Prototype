@@ -6,6 +6,7 @@ class Room {
     this.yoralina = new Character("Yoralina");
   }
 
+
   scene1() {
     $(document).ready(function() {
 
@@ -51,26 +52,36 @@ class Room {
 
   portalIsClicked() {
     $(document).ready(function() {
+      let index = 0;
+
+      var x = document.getElementsByClassName("speakingBubbleWrapper")[0];
+
       $(".secretDoor").on("click", function(){
 
-        //Show the actual hand
-        // room.showHand();
+        index++;
 
-        // room.switchBackgroundColor();
-        room.switchBackgroundImage();
+        if( index <= 1 ) {
+          room.yoralinaIsSpeaking(dialogs.dialog1);
+        }
+        // When the speakingBubble is gone, you can enter next room
+        if ( index >= 2 && window.getComputedStyle(x).display === "none" ) {
+          console.log("Enter Next Room!");
+        }
 
-        room.yoralinaIsSpeaking(dialogs.dialog1);
-
+        console.log(index);
       });
     });
     console.log("portalIsClicked() is working");
   }
 
+
+  // Not used
   showHand() {
     $("#monsterHand").animate({left: "-100"}, 1800);
   }
 
 
+  // Not used
   switchBackgroundColor() {
     var scaryBackground = '<div id="scaryBackground"></div>';
     $("body").append(scaryBackground);
@@ -97,6 +108,7 @@ class Room {
   }
 
 
+  // Not used
   switchBackgroundImage() {
     document.body.style.background = "#f3f3f3 url('images/redsea_wyb51czt.gif') no-repeat 100%";
     document.body.style.backgroundSize = "cover";
@@ -131,6 +143,7 @@ class Room {
 
 
 }
+
 
 var dialogs = {
   dialog1: "STOP RIGHT THERE!!",

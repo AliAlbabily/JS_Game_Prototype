@@ -64,7 +64,7 @@
 	$(document).on("keyup", function(event) {
 
 		event.preventDefault();
-		var img = document.getElementById("RedEyes");
+		// var img = document.getElementById("RedEyes");
 
 		if (event.keyCode === 13) {
 
@@ -97,12 +97,13 @@
 									function(){ $(this).css({ "transition": "0.6s",
 								 																		 "filter": "sepia(0%)"})
 									}
-							).mouseenter(
-									function(){ $(".tooltip p").css({ "display": "block",
-																										"position": "fixed",
-																										"overflow": "hidden"});
-									}
-							);
+							)
+							// .mouseenter(
+							// 		function(){ $(".tooltip p").css({ "display": "block",
+							// 																			"position": "fixed",
+							// 																			"overflow": "hidden"});
+							// 		}
+							// );
 							$(".secretDoorContainer").mouseleave(
 									function(){ $(this).css({ "transition": "0.6s",
 																										 "filter": "sepia(100%)"})

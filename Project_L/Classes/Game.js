@@ -10,15 +10,15 @@ class Game {
   enterFirstRoom() {
     this.rooms[0].scene1();
     this.rooms[0].hideObjects();
-    this.rooms[0].portalIsClicked();
     this.rooms[0].nextDialog();
+    this.rooms[0].portalIsClicked();
   }
 
 }
 
 // Start the application (run the main method (e.g game-constructor))
-// new Game();
+  new Game();
 
 
-const game = new Game();
+// const game = new Game();
 // game.enterFirstRoom();
