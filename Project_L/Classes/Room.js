@@ -18,7 +18,9 @@ class Room {
       var secretDoorContainer = '<div class="secretDoorContainer tooltip"></div>';
       var textPortal = '<p class="textMouseCoordinates" id="pId">Enter the portal??</p>';
       var speakingBubble = '<div class="speakingBubbleWrapper"><p class="speakingBubbleText"></p></div>';
+      var shodow = '<div id="shodowing"></div>';
 
+      $("body").append(shodow);
       $("#InnerDisplayHall").append(roomName, imgYoralina, imgRedeyes, secretDoorContainer, speakingBubble);
       $(".secretDoorContainer").append(secretPortal, textPortal);
     });
@@ -38,6 +40,8 @@ class Room {
       $(".secretDoorContainer").hide();
 
       $(".speakingBubbleWrapper").addClass("hidden");
+
+      $("#shodowing").addClass("hidden");
     });
 
     console.log("hideObjects() is working");
@@ -65,6 +69,7 @@ class Room {
         }
         // When the speakingBubble is gone, you can enter next room
         if ( index >= 2 && window.getComputedStyle(x).display === "none" ) {
+          room.nextRoomEffect();
           console.log("Enter Next Room!");
         }
 
@@ -112,6 +117,14 @@ class Room {
   switchBackgroundImage() {
     document.body.style.background = "#f3f3f3 url('images/redsea_wyb51czt.gif') no-repeat 100%";
     document.body.style.backgroundSize = "cover";
+  }
+
+
+  nextRoomEffect() {
+    // $("#shodowing").removeClass("hidden");
+    $("#shodowing").fadeIn(3000).fadeOut(30
+      00);
+    room.playSoundEffect("Sounds/echo-whoosh 0.5.wav");
   }
 
 
