@@ -5,6 +5,8 @@ class Game {
     this.rooms = [];
     this.rooms.push( new Room("Hall") );
     this.enterFirstRoom();
+    this.rooms.push( new Minigames() );
+    // this.enterMinigameOne();
   }
 
   enterFirstRoom() {
@@ -13,6 +15,13 @@ class Game {
     this.rooms[0].nextDialog();
     this.rooms[0].portalIsClicked();
   }
+
+  // enterMinigameOne() {
+  //   // add elements
+  //
+  //   // hide elements
+  //
+  // }
 
 }
 

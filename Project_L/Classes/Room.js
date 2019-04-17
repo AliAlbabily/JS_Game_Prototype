@@ -122,8 +122,7 @@ class Room {
 
   nextRoomEffect() {
     // $("#shodowing").removeClass("hidden");
-    $("#shodowing").fadeIn(3000).fadeOut(30
-      00);
+    $("#shodowing").fadeIn(3000).fadeOut(3000);
     room.playSoundEffect("Sounds/echo-whoosh 0.5.wav");
   }
 
