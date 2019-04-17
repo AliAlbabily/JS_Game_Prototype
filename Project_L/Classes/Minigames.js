@@ -2,13 +2,11 @@
 class Minigames {
 
   constructor() {
-    // this.name = name;
+
   }
 
-  // getName() {
-  //   return this.name;
-  // }
+  printSomething() {
+    console.log("This is a message from the super class!");
+  }
 
 }
-
-// const minigame = new MinigameOne("GameOne");

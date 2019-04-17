@@ -9,9 +9,7 @@ class Room {
 
   scene1() {
     $(document).ready(function() {
-
       var roomName = '<div id="Display1"></div>';
-
       var imgYoralina = '<img src="images/lyrica.png" id="lyrica" draggable="false">';
       var imgRedeyes = '<img src="images/268676961000211.png" id="RedEyes" draggable="false">';
       var secretPortal = '<img src="images/pic5abfb86bb2efe7_original_70089075.gif" class="secretDoor" draggable="false">';
@@ -24,7 +22,6 @@ class Room {
       $("#InnerDisplayHall").append(roomName, imgYoralina, imgRedeyes, secretDoorContainer, speakingBubble);
       $(".secretDoorContainer").append(secretPortal, textPortal);
     });
-
     console.log("scene1() is working");
   }
 
@@ -43,7 +40,6 @@ class Room {
 
       $("#shodowing").addClass("hidden");
     });
-
     console.log("hideObjects() is working");
   }
 
