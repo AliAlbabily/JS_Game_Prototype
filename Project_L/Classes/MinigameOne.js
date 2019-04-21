@@ -5,11 +5,27 @@ class MinigameOne extends Minigames {
     super();
   }
 
-  print() {
+
+  showObjects() {
+    $(document).ready(function() {
+      var minigameOne = '<div id="DisplayM1"></div>';
+
+        $("#InnerDisplayHall").append(minigameOne);
+    });
+  }
+
+
+  hideObjects() {
+    $(document).ready(function() {
+
+    });
+  }
+
+
+  testPrint() {
     super.printSomething();
   }
 
 }
 
-// const minigameone = new MinigameOne();
-// minigameone.print();
+const minigameone = new MinigameOne();
