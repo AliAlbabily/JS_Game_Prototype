@@ -36,10 +36,8 @@ body {
   display: block;
   margin: auto;
   background-color: Black;
-
   background-image: url(images/b-o-w-qin-10.jpg);
   background-repeat: no-repeat;
-
   width: 800px;
   height:600px;
   position:absolute;
@@ -49,10 +47,21 @@ body {
   top:0;
   bottom:0;
   margin:auto;
-  /* max-width:100%;
-  max-height:100%; */
-  /* overflow:auto; */
+}
 
+.display{
+  display: block;
+  margin: auto;
+  background-repeat: no-repeat;
+  width: 800px;
+  height:600px;
+  position:absolute;
+  z-index: -1;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  margin:auto;
 }
 
 #lyrica {

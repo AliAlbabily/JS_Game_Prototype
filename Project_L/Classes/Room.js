@@ -22,7 +22,7 @@ class Room {
       $("#InnerDisplayHall").append(roomName, imgYoralina, imgRedeyes, secretDoorContainer, speakingBubble);
       $(".secretDoorContainer").append(secretPortal, textPortal);
     });
-    console.log("scene1() is working");
+    console.log("showObjects() is working");
   }
 
 
@@ -157,6 +157,16 @@ class Room {
     });
     console.log("nextDialog() is working");
   }
+
+  // classIsFinished() {
+  //   var display = document.getElementById("InnerDisplayHall");
+  //
+  //   if( display != null ) {
+  //     console.log("Exist!");
+  //   } else {
+  //     console.log("Does not exist!");
+  //   }
+  // }
 
 
 }

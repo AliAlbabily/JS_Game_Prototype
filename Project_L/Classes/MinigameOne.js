@@ -8,18 +8,18 @@ class MinigameOne extends Minigames {
 
   showObjects() {
     $(document).ready(function() {
-      var minigameOne = '<div id="DisplayM1"></div>';
+      var minigameOneDisplay = '<div id="DisplayM1" class="display"></div>';
 
-        $("#InnerDisplayHall").append(minigameOne);
+      $("body").append(minigameOneDisplay);
     });
   }
 
 
-  hideObjects() {
-    $(document).ready(function() {
-
-    });
-  }
+  // hideObjects() {
+  //   $(document).ready(function() {
+  //
+  //   });
+  // }
 
 
   testPrint() {

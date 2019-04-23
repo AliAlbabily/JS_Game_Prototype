@@ -6,7 +6,10 @@ class Game {
     this.rooms.push( new Room("Hall") );
     this.enterFirstRoom();
     this.rooms.push( new MinigameOne() );
-    this.startFirstMinigame();
+
+    this.checkRooms();
+
+    // this.startFirstMinigame();
   }
 
   enterFirstRoom() {
@@ -14,19 +17,22 @@ class Game {
     this.rooms[0].hideObjects();
     this.rooms[0].nextDialog();
     this.rooms[0].portalIsClicked();
+    // this.startFirstMinigame();
   }
 
-  startFirstMinigame() {
-    // add elements
-    // hide elements
-    this.rooms[1].testPrint();
+  // startFirstMinigame() {
+  //   this.rooms[1].testPrint();
+  // }
+
+  checkRooms() {
+    console.log(this.rooms);
   }
 
 }
 
 // Start the application (run the main method (e.g game-constructor))
+  // First way
   new Game();
 
-
-// const game = new Game();
-// game.enterFirstRoom();
+  //Second way
+  // const game = new Game();
