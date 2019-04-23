@@ -7,7 +7,7 @@ class Room {
   }
 
 
-  scene1() {
+  showObjects() {
     $(document).ready(function() {
       var roomName = '<div id="Display1"></div>';
       var imgYoralina = '<img src="images/lyrica.png" id="lyrica" draggable="false">';

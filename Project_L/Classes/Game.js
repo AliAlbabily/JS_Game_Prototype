@@ -10,7 +10,7 @@ class Game {
   }
 
   enterFirstRoom() {
-    this.rooms[0].scene1();
+    this.rooms[0].showObjects();
     this.rooms[0].hideObjects();
     this.rooms[0].nextDialog();
     this.rooms[0].portalIsClicked();
