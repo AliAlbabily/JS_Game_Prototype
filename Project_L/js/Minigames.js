@@ -1,5 +1,5 @@
 
-class Minigames {
+class Minigame {
 
   constructor() {
 

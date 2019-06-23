@@ -1,5 +1,5 @@
 
-class MinigameOne extends Minigames {
+class MinigameOne extends Minigame {
 
   constructor() {
     super();
