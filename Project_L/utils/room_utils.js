@@ -42,3 +42,8 @@ function showEffectObject(effectObject) {
     $(cssSelector).removeClass("hidden");
   });
 }
+
+// Other. Remove element
+function removeObject(selector) {
+  $(selector).remove();
+}

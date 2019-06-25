@@ -1,3 +1,4 @@
+
 class Room {
 
   // name : String, the name of the room
@@ -20,22 +21,6 @@ class Room {
     this.characters = characters;
     this.initFunction = initFunction;
   }
-
-  // showAllObjects() {
-  //   this.objectsList.forEach( function(object) {
-  //     addToScreen(object);
-  //   });
-  //   console.log("showObjects() is done");
-  // }
-
-  // cssSelectors : [String], where String is a valid CSS selector
-  // hideObjects(selectorsObject, effect) {
-  //   selectorsObject.forEach(function(selector){
-  //     $(selector).addClass("hidden");
-  //   });
-  //   hideFromScreen(effect);
-  //   console.log("hideObjects() is working");
-  // }
 
 
   playSoundEffect(src) {
@@ -81,30 +66,11 @@ class Room {
   // }
 
 
-  // Not used
-  // switchBackgroundImage() {
-  //   document.body.style.background = "#f3f3f3 url('images/redsea_wyb51czt.gif') no-repeat 100%";
-  //   document.body.style.backgroundSize = "cover";
-  // }
+  switchBackgroundImage(src) {
+    document.body.style.background = `#f3f3f3 url(${src})`; //`#f3f3f3 url(${src}) no-repeat 100%`
+    document.body.style.backgroundSize = "cover";
+  }
 
-
-  // nextRoomEffect() {
-  //   $("#shodowing").fadeIn(3000).fadeOut(3000);
-  //   room.playSoundEffect("Sounds/echo-whoosh 0.5.wav");
-  //   room.removeMainDisplay();
-  //
-  //   // do stuff
-  // }
-
-
-  // removeMainDisplay() {
-  //   $("#InnerDisplayHall")
-  //     .delay(3000)
-  //     .queue(function() {
-  //       $(this).remove();
-  //     });
-  // }
-  
 }
 
 // const room = new Room("Hall");

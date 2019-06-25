@@ -8,12 +8,6 @@ class Game {
     this.startRoom(shadowing , this.rooms.hallRoom);
   }
 
-  // Starting up the game by runinng the first room.
-  // Can also activate and deactivate other rooms.
-  // roomsMaganger() {
-  //   this.startFirstRoom(this.rooms.hallRoom, true);
-  // }
-
   // effect (Argument 1) : is an object, ex. {container: "body", elements: ['<div></div>']}
   // room (Argument 2) : is a whole room class
   startRoom(effect, room) {

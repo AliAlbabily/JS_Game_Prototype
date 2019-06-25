@@ -139,12 +139,12 @@ function secretDoorIsClicked() {
     }
     // When the speakingBubble is gone, you can enter next room
     if (index >= 2 && window.getComputedStyle(x).display === "none") {
-
+      console.log("Next room entered!");
       nextRoomEffect();
 
-      // Start next room ...
+      // Start next room (Minigame1) ...
+      startFirstMinigame();
 
-      console.log("Next room entered!");
     }
     console.log(index);
   });

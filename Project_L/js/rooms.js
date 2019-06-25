@@ -1,5 +1,5 @@
+
 const ROOMS = {
-    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     hallRoom: new Room(
       //name
       "Hall",
@@ -35,15 +35,51 @@ const ROOMS = {
       ["STOP RIGHT THERE!!",
       "I need to tell you something before you enter that place...",
       "My name is YoraLina and I'm the headmaster of this place...",
-      "Now you may go ahead and don't forget to be careful out there..."]
-      ,
+      "Now you may go ahead and don't forget to be careful out there..."],
       //characters
       [new Character("Yoralina")],
       //initFunction
       function() {
         console.log("Test");
       }
-
-    )     // <----- Add " , " here when creating a new room within the return statement
-    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ),
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    minigameOne: new Room(
+      //name
+      "Minigame1",
+      //objectList
+      [
+        {
+          container: "body",
+          elements: [
+            '<div id="InnerDisplayMinigamOne"></div>'
+          ],
+          selectors: [
+            "#InnerDisplayMinigamOne"
+          ]
+        },
+        {
+          container: "#InnerDisplayMinigamOne",
+          elements: [
+            '<div class="startBattleBtn">START BATTTLE!!</div>',
+            '<img src="images/Dabious.png" id="dabious" draggable="false">',
+            '<div id="battleStatusContainer"><span id="battleStatus"></span></div>'
+          ],
+          selectors: [
+            ".startBattleBtn",
+            "#daboius",
+            "#battleStatusContainer",
+            "#battleStatus"
+          ]
+        }
+      ],
+      //dialogs
+      ["Prepare to die human..."],
+      //characters
+      [],
+      //initFunction
+      function() {
+        console.log("...");
+      }
+    ) // <----- Add " , " here when creating a new room or minigame
 }
