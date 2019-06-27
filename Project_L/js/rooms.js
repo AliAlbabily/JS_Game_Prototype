@@ -61,13 +61,13 @@ const ROOMS = {
         {
           container: "#InnerDisplayMinigamOne",
           elements: [
-            '<div class="startBattleBtn">START BATTTLE!!</div>',
+            '<div class="startBattleBtn">START BATTLE!!</div>',
             '<img src="images/Dabious.png" id="dabious" draggable="false">',
             '<div id="battleStatusContainer"><span id="battleStatus"></span></div>'
           ],
           selectors: [
             ".startBattleBtn",
-            "#daboius",
+            "#dabious",
             "#battleStatusContainer",
             "#battleStatus"
           ]

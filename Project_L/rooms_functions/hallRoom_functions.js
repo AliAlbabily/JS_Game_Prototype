@@ -55,9 +55,10 @@ function enterPassword() {
 	$(document).on("keyup", function(event) {
 		event.preventDefault();
 		if (event.keyCode === 13) {
-			if ( keyPhrase[0] == "h" && keyPhrase[1] == "e" && keyPhrase[2] == "l" && keyPhrase[3] == "l" && keyPhrase[4] == "o" ) {
-		    // console.log("Door Unlocked");
-        room.playSoundEffect("Sounds/Panic-Mike_Koenig-717059030.mp3");
+			if ( keyPhrase[0] == "h" ) { //&& keyPhrase[1] == "e" && keyPhrase[2] == "l" && keyPhrase[3] == "l" && keyPhrase[4] == "o" 
+		    console.log("Door Unlocked");
+
+        room.playSoundEffect("Sounds/Panic-Mike_Koenig-717059030.mp3", 0.5);
 
 				/*Set glitchy background*/
 				$('body').css({
@@ -82,7 +83,7 @@ function enterPassword() {
 		  }
 		  else {
 	      console.log("Try again!");
-				room.playSoundEffect("Sounds/lose sound 2 - 1_0.wav");
+				room.playSoundEffect("Sounds/lose sound 2 - 1_0.wav", 1);
 				$("#RedEyes").fadeIn(900).fadeOut(900);
 				keyPhrase.splice(0, keyPhrase.length);
 		  }
@@ -111,7 +112,7 @@ function showSecretPortal() {
 
 function nextRoomEffect() {
   $("#shadowing").fadeIn(3000).fadeOut(3000);
-  room.playSoundEffect("Sounds/echo-whoosh 0.5.wav");
+  room.playSoundEffect("Sounds/echo-whoosh 0.5.wav", 0.5);
   removeMainDisplay();
 }
 
@@ -159,7 +160,7 @@ function nextDialog() {
       hideObject(".speakingBubbleWrapper");
     }
     else {
-      room.playSoundEffect("Sounds/MenuSelectionClick.wav");
+      room.playSoundEffect("Sounds/MenuSelectionClick.wav", 0.5);
       character.speak(ROOMS.hallRoom.dialogs[index]);
       index++;
     }

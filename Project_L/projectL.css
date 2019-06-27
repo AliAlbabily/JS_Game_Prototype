@@ -220,29 +220,6 @@ body {
 /*****************************  First Minigame  *******************************/
 /******************************************************************************/
 
-.startBattleBtn {
-  width: 250px;
-  height: 80px;
-  background-color: rgba(128, 116, 116, 0.75);
-  color: Black;
-  position: relative;
-  z-index: 1;
-  margin-left: auto;
-  margin-right: auto;
-  top: 260px;
-  line-height: 80px;
-  font-family: fantasy;
-  font-size: xx-large;
-  border-radius: 30px;
-  text-align: center;
-  border: solid 1.5px red;
-}
-
-.startBattleBtn:hover {
-  background-color: rgba(206, 77, 77, 0.75);
-  cursor: pointer;
-}
-
 #InnerDisplayMinigamOne {
   display: block;
   margin: auto;
@@ -258,19 +235,58 @@ body {
   overflow: hidden;
 }
 
+.startBattleBtn {
+  width: 250px;
+  height: 80px;
+  background-color: rgba(160, 46, 174, 0.75);
+  color: Black;
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+  top: 260px;
+  line-height: 80px;
+  font-family: fantasy;
+  font-size: xx-large;
+  border-radius: 30px;
+  text-align: center;
+  border: solid 1.5px #fb00ff;
+}
+
+.startBattleBtn:hover {
+  background-color: rgba(192, 107, 202, 0.75);;
+  cursor: pointer;
+}
+
 #dabious {
   position: absolute;
   width: 52%;
   left: 380px;
   top: 20px;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 
 #battleStatusContainer {
+  background-image: url("images/BattleBanner.jpg");
   width: 100%;
   height: 60px;
   background-color: Silver;
   text-align: center;
   line-height: 60px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  border-bottom: solid 1px White;
+}
+
+#battleStatusContainer span {
+  color: White;
+  font-family: fantasy;
+  font-size: larger;
 }
 
 /* #battleStatus {

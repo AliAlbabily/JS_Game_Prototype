@@ -23,9 +23,9 @@ class Room {
   }
 
 
-  playSoundEffect(src) {
+  playSoundEffect(src, soundVolume) {
     var audio = new Audio(src);
-    audio.volume = 0.5;
+    audio.volume = soundVolume;
     audio.preLoad = true;
     audio.play();
   }
@@ -36,33 +36,6 @@ class Room {
   //   $("#monsterHand").animate({
   //     left: "-100"
   //   }, 1800);
-  // }
-
-
-  // Not used
-  // switchBackgroundColor() {
-  //   var scaryBackground = '<div id="scaryBackground"></div>';
-  //   $("body").append(scaryBackground);
-  //
-  //   let i = 0;
-  //   let counter = 0;
-  //
-  //   var playAnimation = setInterval(function() {
-  //     var colorList = ["rgba(199, 13, 0, 0.7)", "rgba(0, 0, 0, 0)"];
-  //     let scaryBackground = document.getElementById('scaryBackground');
-  //
-  //     scaryBackground.style.backgroundColor = colorList[i];
-  //     i = (i + 1) % colorList.length;
-  //
-  //     counter++;
-  //     console.log(counter);
-  //
-  //     if (counter == 30) {
-  //       clearInterval(playAnimation);
-  //       console.log("Counter has stopped!" + counter);
-  //       scaryBackground.remove();
-  //     }
-  //   }, 50);
   // }
 
 
