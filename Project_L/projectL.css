@@ -289,6 +289,18 @@ body {
   font-size: larger;
 }
 
-/* #battleStatus {
+.hpContainer {
+  position: absolute;
+  background: antiquewhite;
+  top: 200px;
+  display: grid;
+}
 
-} */
+.attackEnemyBtn {
+  position: absolute;
+  width: 200px;
+  height: 80px;
+  background-color: rgba(160, 46, 174, 0.75);
+  color: Black;
+  top: 400px;
+}

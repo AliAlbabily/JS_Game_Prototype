@@ -2,11 +2,18 @@
 function startFirstMinigame() {
   this.content = ROOMS.minigameOne;
 
-  // Create content after 4 sec.
+  // Start content manipulation after 3 sec.
   setTimeout(function() {
     // Create
     creatObject(this.content.objectsList[0]);
     creatObject(this.content.objectsList[1]);
+    // Hide
+    hideObjects(firstMinigame.objectsList);
+    // Show
+    showObject(firstMinigame.objectsList[1].selectors[0]);
+    showObject(firstMinigame.objectsList[1].selectors[1]);
+    showObject(firstMinigame.objectsList[1].selectors[2]);
+    showObject(firstMinigame.objectsList[1].selectors[3]);
   }, 3000);
 
   // Initial functions
@@ -29,7 +36,11 @@ function startBattleBtnActivates() {
 
 
 function startBattle() {
+  printAllCharactersHp();
+  //The enemy attacks automatically
   enemyAttacks();
+  //You attack manually
+  attackEnemyBtnIsClicked();
 }
 
 
@@ -44,7 +55,7 @@ function enemyAttacks() {
 function enemyAttackingEffects() {
   let counter = 0;
 
-  setTimeout(function(){
+  setTimeout(function() {
     firstMinigame.playSoundEffect("Sounds/EnemyAttacks.wav", 1);
     $("#dabious").css({ "transition": "0.2s", "filter": "invert(100%)" });
 
@@ -62,6 +73,30 @@ function enemyAttackingEffects() {
       clearInterval(attacksEffect);
     }
   }, 100);
+}
+
+
+function attackEnemyBtnIsClicked() {
+  showObject(".attackEnemyBtn");
+  $(".attackEnemyBtn").on("click", function() {
+    console.log(enemy.getHp());
+    attackEnemy();
+  });
+}
+
+
+function attackEnemy() {
+  let currentHp = enemy.getHp();
+  let damageDealt = 15;
+
+  let updatedHp = enemy.setHp(currentHp - damageDealt);
+  console.log(currentHp);
+  updateEnemyHp(updatedHp);
+}
+
+
+function updateEnemyHp(newHp) {
+  $(".enemyHp").text("Enemy's HP: " + newHp);
 }
 
 
@@ -90,6 +125,13 @@ function switchBackgroundColor() {
   }, 50);
 }
 
+function printAllCharactersHp() {
+  showObject(".hpContainer");
+  showObject(".heroHp");
+  showObject(".enemyHp");
+  $(".heroHp").text("Hero's HP: " + hero.getHp());
+  $(".enemyHp").text("Enemy's HP: " + enemy.getHp());
+}
 
 function switchBackgroundImageWithInterval() {
   setTimeout(function() {
@@ -97,4 +139,6 @@ function switchBackgroundImageWithInterval() {
   }, 3000);
 }
 
+const hero = ROOMS.minigameOne.characters[0];
+const enemy = ROOMS.minigameOne.characters[1];
 const firstMinigame = ROOMS.minigameOne;

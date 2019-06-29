@@ -55,7 +55,7 @@ function enterPassword() {
 	$(document).on("keyup", function(event) {
 		event.preventDefault();
 		if (event.keyCode === 13) {
-			if ( keyPhrase[0] == "h" ) { //&& keyPhrase[1] == "e" && keyPhrase[2] == "l" && keyPhrase[3] == "l" && keyPhrase[4] == "o" 
+			if ( keyPhrase[0] == "h" ) { //&& keyPhrase[1] == "e" && keyPhrase[2] == "l" && keyPhrase[3] == "l" && keyPhrase[4] == "o"
 		    console.log("Door Unlocked");
 
         room.playSoundEffect("Sounds/Panic-Mike_Koenig-717059030.mp3", 0.5);
@@ -156,7 +156,7 @@ function nextDialog() {
   let index = 1;
 
   $(".speakingBubbleWrapper").on("click", function(){
-    if( index >= ROOMS.hallRoom.dialogs.length )  {
+    if( index >= ROOMS.hallRoom.dialogs.length ) {
       hideObject(".speakingBubbleWrapper");
     }
     else {

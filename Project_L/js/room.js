@@ -10,7 +10,7 @@ class Room {
 
   //dialogs : [Strings], where Strings are normal dialogs
 
-  //characters : [Character],
+  //characters : [Character/Enemy],
 
   //initFunction : Function, this function will initilize the rooms
 

@@ -63,20 +63,26 @@ const ROOMS = {
           elements: [
             '<div class="startBattleBtn">START BATTLE!!</div>',
             '<img src="images/Dabious.png" id="dabious" draggable="false">',
-            '<div id="battleStatusContainer"><span id="battleStatus"></span></div>'
+            '<div id="battleStatusContainer"><span id="battleStatus"></span></div>',
+            '<div class="hpContainer"><span class="enemyHp"></span><span class="heroHp"></span></div>',
+            '<div class="attackEnemyBtn">ATTACK!!</div>'
           ],
           selectors: [
             ".startBattleBtn",
             "#dabious",
             "#battleStatusContainer",
-            "#battleStatus"
+            "#battleStatus",
+            ".hpContainer",
+            ".enemyHp",
+            ".heroHp",
+            ".attackEnemyBtn"
           ]
         }
       ],
       //dialogs
       ["Prepare to die human..."],
       //characters
-      [],
+      [new Hero("Hero", 100), new Enemy("Badious", 200)],
       //initFunction
       function() {
         console.log("...");
