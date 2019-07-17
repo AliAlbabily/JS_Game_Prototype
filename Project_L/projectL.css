@@ -283,7 +283,13 @@ body {
   border-bottom: solid 1px White;
 }
 
-#battleStatusContainer span {
+/* #battleStatusContainer span {
+  color: White;
+  font-family: fantasy;
+  font-size: larger;
+} */
+
+#battleStatus {
   color: White;
   font-family: fantasy;
   font-size: larger;
@@ -298,9 +304,15 @@ body {
 
 .attackEnemyBtn {
   position: absolute;
-  width: 200px;
-  height: 80px;
+  width: 140px;
+  height: 70px;
   background-color: rgba(160, 46, 174, 0.75);
   color: Black;
   top: 400px;
+  line-height: 70px;
+  text-align: center;
+  font-family: fantasy;
+  font-size: larger;
+  border-radius: 25px;
+  border: solid 1.5px #fb00ff;
 }

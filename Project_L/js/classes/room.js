@@ -23,11 +23,13 @@ class Room {
   }
 
 
-  playSoundEffect(src, soundVolume) {
-    var audio = new Audio(src);
-    audio.volume = soundVolume;
-    audio.preLoad = true;
-    audio.play();
+  playSoundEffect(src, soundVolume, delay) {
+    setTimeout( function() {
+      var audio = new Audio(src);
+      audio.volume = soundVolume;
+      audio.preLoad = true;
+      audio.play();
+    }, delay);
   }
 
 
@@ -45,5 +47,3 @@ class Room {
   }
 
 }
-
-// const room = new Room("Hall");

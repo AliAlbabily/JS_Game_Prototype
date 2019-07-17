@@ -82,7 +82,10 @@ const ROOMS = {
       //dialogs
       ["Prepare to die human..."],
       //characters
-      [new Hero("Hero", 100), new Enemy("Badious", 200)],
+      [
+        new Hero("Hero", 100),
+        new Enemy("Badious", 200)
+      ],
       //initFunction
       function() {
         console.log("...");
