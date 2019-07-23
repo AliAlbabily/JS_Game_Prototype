@@ -78,6 +78,14 @@ function switchBackgroundImageWithEffects(src) {
   document.body.style.backgroundSize = "cover";
   document.body.style.transition = " all 1s";
   document.body.style.transitionDelay = " 0s";
+
+  // Set background-image back to original image after 2 sec of activation
+  setTimeout(function() {
+    document.body.style.background = '#f3f3f3 url("images/F43kZP.gif")';
+    document.body.style.backgroundSize = "cover";
+    document.body.style.transition = " all 1s";
+    document.body.style.transitionDelay = " 0s";
+  }, 2000);
 }
 
 
@@ -93,14 +101,14 @@ function enemyAttackingEffects() {
     firstMinigame.playSoundEffect("Sounds/EnemyAttacks.wav", 1, 0);
     $("#dabious").css({ "transition": "0.2s", "filter": "invert(100%)" });
     switchBackgroundColor();
-  }, 1000);
+  }, 0);
 
   let attacksEffect = setInterval(function() {
     counter++;
     console.log(counter);
 
     // 14 corresponds 1400 milliseconds
-    if ( counter >= 14 ) {
+    if ( counter >= 4 ) {
       $("#dabious").css({ "transition": "0.2s", "filter": "invert(0%)" });
       clearInterval(attacksEffect);
     }
@@ -181,7 +189,7 @@ function switchBackgroundColor() {
   let counter = 0;
 
   var playAnimation = setInterval(function() {
-    var colorList = ["rgba(255, 255, 255, 0.3)", "rgba(0, 0, 0, 0)"];  //rgba(199, 13, 0, 0.7)
+    var colorList = ["rgba(255, 255, 255, 0.1)", "rgba(0, 0, 0, 0)"];  //rgba(199, 13, 0, 0.7)
     let scaryBackground = document.getElementById('scaryBackground');
 
     scaryBackground.style.backgroundColor = colorList[i];
