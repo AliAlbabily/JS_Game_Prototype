@@ -138,7 +138,7 @@ function secretDoorIsClicked() {
       showObject(".speakingBubbleText");
       character.speak(ROOMS.hallRoom.dialogs[0]);
     }
-    // When the speakingBubble is gone, you can enter next room
+    // When the speakingBubble is gone, you will be able to enter next room
     if (index >= 2 && window.getComputedStyle(x).display === "none") {
       console.log("Next room entered!");
       nextRoomEffect();

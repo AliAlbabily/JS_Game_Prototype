@@ -2,7 +2,7 @@
 const ROOMS = {
     hallRoom: new Room(
       //name
-      "Hall",
+      "Main Hall",
       //objectList
       [
         {
@@ -85,6 +85,100 @@ const ROOMS = {
       [
         new Hero("Hero", 100),
         new Enemy("Badious", 200)
+      ],
+      //initFunction
+      function() {
+        console.log("...");
+      }
+    ),
+    //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++//
+    theCaves: new Room(
+      //name
+      "The Caves",
+      //objectList
+      [
+        {
+          container: "body",
+          elements: [
+            '<div id="InnerDisplayTheCaves"></div>'
+          ],
+          selectors: [
+            "#InnerDisplayTheCaves"
+          ]
+        },
+        {
+          container: "#InnerDisplayTheCaves",
+          elements: [
+            '<image src="images/arrow.png" id="cave1Right" draggable="false">',
+            '<image src="images/arrow_forward.png" id="cave1Forward" draggable="false">'
+          ],
+          selectors: [
+            "#cave1Right",
+            "#cave1Forward"
+          ]
+        },
+        {
+          container: "body",
+          elements: [
+            '<div id="InnerDisplayTheCaves2"></div>'
+          ],
+          selectors: [
+            "#InnerDisplayTheCaves2"
+          ]
+        },
+        {
+          container: "#InnerDisplayTheCaves2",
+          elements: [
+            '<image src="images/arrow_forward.png" id="cave2Forward" draggable="false">',
+            '<div>BACK</div>'
+          ],
+          selectors: [
+            "#cave2Forward",
+            "#back"
+          ]
+        },
+        {
+          container: "body",
+          elements: [
+            '<div id="InnerDisplayTheCaves5"></div>'
+          ],
+          selectors: [
+            "#InnerDisplayTheCaves5"
+          ]
+        },
+        { // index 5
+          container: "body",
+          elements: [
+            '<div id="InnerDisplayTheCaves8"></div>'
+          ],
+          selectors: [
+            "#InnerDisplayTheCaves8"
+          ]
+        },
+        {
+          container: "body",
+          elements: [
+            '<div id="InnerDisplayTheCaves3"></div>'
+          ],
+          selectors: [
+            "#InnerDisplayTheCaves3"
+          ]
+        },
+        {
+          container: "#InnerDisplayTheCaves3",
+          elements: [
+            '<image src="images/hooded_ghost.png" id="hoodedManLongDistance" draggable="false">'
+          ],
+          selectors: [
+            "#hoodedManLongDistance"
+          ]
+        }
+      ],
+      //dialogs
+      ["haha"],
+      //characters
+      [
+        new Character("Hooded Person")
       ],
       //initFunction
       function() {

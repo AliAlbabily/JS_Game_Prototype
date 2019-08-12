@@ -1,12 +1,12 @@
 
 function startFirstMinigame() {
-  this.content = ROOMS.minigameOne;
-
   // Start content manipulation after 3 sec.
   setTimeout(function() {
+    // Remove all objects from previous room
+    removeObject("#InnerDisplayHall");
     // Create
-    creatObject(this.content.objectsList[0]);
-    creatObject(this.content.objectsList[1]);
+    creatObject(firstMinigame.objectsList[0]);
+    creatObject(firstMinigame.objectsList[1]);
     // Hide
     hideObjects(firstMinigame.objectsList);
     // Show
@@ -14,7 +14,7 @@ function startFirstMinigame() {
     showObject(firstMinigame.objectsList[1].selectors[1]);
     showObject(firstMinigame.objectsList[1].selectors[2]);
     showObject(firstMinigame.objectsList[1].selectors[3]);
-  }, 1000); // <-- Delay was 3000 before
+  }, 3000); // <-- Delay was 3000 before
 
   // Initial functions
   initialFunctionsMinigameOne();
@@ -22,7 +22,7 @@ function startFirstMinigame() {
 
 
 function initialFunctionsMinigameOne() {
-  switchBackgroundImageWithInterval();
+  firstMinigame.switchBackgroundImage("images/F43kZP.gif", 3000);
   startBattleBtnIsClicked();
 }
 
@@ -85,7 +85,7 @@ function switchBackgroundImageWithEffects(src) {
     document.body.style.backgroundSize = "cover";
     document.body.style.transition = " all 1s";
     document.body.style.transitionDelay = " 0s";
-  }, 2000);
+  }, 1400);
 }
 
 
@@ -117,15 +117,11 @@ function enemyAttackingEffects() {
 
 
 function attackEnemyBtnIsClicked() {
-
   showObject(".attackEnemyBtn");
-
   let thresholdsCounter = 0;
 
   $(".attackEnemyBtn").on("click", function() {
-
     hideObject(".attackEnemyBtn");
-
     attackEnemy();
     updateBattleStatus("Daboius took: " + 15 + " damage!", 0, "#958484");
 
@@ -141,6 +137,7 @@ function attackEnemyBtnIsClicked() {
     }
     else {
       console.log("Game Over!");
+      startSecondRoom();
     }
   });
 }
@@ -204,13 +201,6 @@ function switchBackgroundColor() {
       scaryBackground.remove();
     }
   }, 50);
-}
-
-
-function switchBackgroundImageWithInterval() {
-  setTimeout(function() {
-    room.switchBackgroundImage("images/F43kZP.gif");
-  }, 1000); // <-- Delay was 3000 before
 }
 
 

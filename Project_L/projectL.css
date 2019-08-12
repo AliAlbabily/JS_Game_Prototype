@@ -1,7 +1,6 @@
 
 body {
   margin: 0;
-  /* background-image: url("images/Thunders.gif"); */
   background-color: #cccccc;
 }
 
@@ -51,8 +50,6 @@ body {
 #lyricaOutside {
   width: 450px;
   height: 700px;
-  /* opacity: 0.0;
-  visibility: invisible; */
 }
 
 #MagicalButton {
@@ -87,11 +84,9 @@ body {
 #OuterChatDisplay {
   width: 100%;
   height: 250px;
-  /* background-color: White; */
   position: absolute;
   bottom: 0px;
   z-index: 2;
-
   background: linear-gradient(to top, rgba(214, 128, 128, 0.6), rgba(0,0,0,0)); /* (238, 232, 238, 0.6) */
 }
 
@@ -107,10 +102,8 @@ body {
   font-size: 3em;
   font-family: monospace;
   color: Red;
-  text-shadow: 2px 2px 5px #2f2a2a; /* #8a0808*/
+  text-shadow: 2px 2px 5px #2f2a2a;
   width: 1500px;
-  /* margin-top: 100px; */
-  /* white-space: normal; */
   top: 120px;
   position: relative;
   padding: 5px;
@@ -133,7 +126,6 @@ body {
   position: absolute;
   z-index: 3;
 }
-
 
 #RedEyes {
   position: absolute;
@@ -177,7 +169,6 @@ body {
   width: 100%;
   height: 100%;
   top: 0;
-  /* background-color: rgba(255, 255, 255, 0.6); */
 }
 
 #shadowing {
@@ -283,12 +274,6 @@ body {
   border-bottom: solid 1px White;
 }
 
-/* #battleStatusContainer span {
-  color: White;
-  font-family: fantasy;
-  font-size: larger;
-} */
-
 #battleStatus {
   color: White;
   font-family: fantasy;
@@ -315,4 +300,136 @@ body {
   font-size: larger;
   border-radius: 25px;
   border: solid 1.5px #fb00ff;
+}
+
+/******************************************************************************/
+/*****************************  Second Room  *******************************/
+/******************************************************************************/
+
+#InnerDisplayTheCaves {
+  display: block;
+  margin: auto;
+  background-color: Black;
+  background-image: url("images/Cave1.png");
+  opacity: 0.9;
+  z-index: 1;
+  width: 800px;
+  height:600px;
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+}
+
+#InnerDisplayTheCaves2 {
+  margin: auto;
+  background-image: url("images/Cave2.jpg");
+  z-index: 2;
+  width: 800px;
+  height:600px;
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+}
+
+#InnerDisplayTheCaves3 {
+  margin: auto;
+  background-image: url("images/Cave3.jpg");
+  z-index: 3;
+  width: 800px;
+  height:600px;
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+}
+
+#InnerDisplayTheCaves5 {
+  margin: auto;
+  background-image: url("images/Cave5.jpg");
+  z-index: 2;
+  width: 800px;
+  height:600px;
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+}
+
+#InnerDisplayTheCaves8 {
+  margin: auto;
+  background-image: url("images/Cave8.jpg");
+  z-index: 2;
+  width: 800px;
+  height:600px;
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+}
+
+#hoodedManLongDistance {
+  width: 70px;
+height: 75px;
+position: absolute;
+top: 356px;
+left: 421px;
+opacity: 0.7;
+}
+
+#cave1Right {
+  position: absolute;
+  width: 8%;
+  top: 319px;
+  left: 609px;
+  opacity: 0.4;
+}
+
+#cave1Right:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#cave1Forward {
+  position: absolute;
+  width: 5%;
+  top: 314px;
+  left: 299px;
+  opacity: 0.4;
+  transform: rotate(156deg);
+}
+
+#cave1Forward:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#cave2Forward {
+  position: absolute;
+  width: 6%;
+  top: 474px;
+  left: 332px;
+  opacity: 0.4;
+  transform: rotate(202deg);
+}
+
+#cave2Forward:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+#back {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  border-radius: 5px;
+  position: absolute;
+  background-color: Black;
+  color: White;
 }

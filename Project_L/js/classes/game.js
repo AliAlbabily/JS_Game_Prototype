@@ -6,7 +6,8 @@ class Game {
     this.rooms = ROOMS;
 
     // this.startRoom(shadowing , this.rooms.hallRoom);
-    startFirstMinigame();
+    // startFirstMinigame();
+    startSecondRoom();
   }
 
   // effect (Argument 1) : is an object, ex. {container: "body", elements: ['<div></div>']}

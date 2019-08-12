@@ -35,9 +35,13 @@ function showObject(selector) {
   $(selector).removeClass("hidden");
 }
 
+// 3. Show one element
+function showObjectWithSelector(selector) {
+  $(selector).removeClass("hidden");
+}
+
 // 3. Show effect element
 function showEffectObject(effectObject) {
-  console.log(effectObject);
   effectObject.selectors.forEach(function(cssSelector) {
     $(cssSelector).removeClass("hidden");
   });

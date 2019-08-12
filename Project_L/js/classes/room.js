@@ -41,9 +41,11 @@ class Room {
   // }
 
 
-  switchBackgroundImage(src) {
-    document.body.style.background = `#f3f3f3 url(${src})`; //`#f3f3f3 url(${src}) no-repeat 100%`
-    document.body.style.backgroundSize = "cover";
+  switchBackgroundImage(src, delay) {
+    setTimeout(function() {
+      document.body.style.background = `#f3f3f3 url(${src})`; //`#f3f3f3 url(${src}) no-repeat 100%`
+      document.body.style.backgroundSize = "cover";
+    }, delay);
   }
 
 }
