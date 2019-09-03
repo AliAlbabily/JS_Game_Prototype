@@ -306,65 +306,37 @@ body {
 /*****************************  Second Room  *******************************/
 /******************************************************************************/
 
+#hoodedManLongDistance {
+  width: 70px;
+  height: 75px;
+  position: absolute;
+  top: 356px;
+  left: 421px;
+  opacity: 0.7;
+}
+
 #InnerDisplayTheCaves {
-  display: block;
-  margin: auto;
-  background-color: Black;
   background-image: url("images/Cave1.png");
-  opacity: 0.9;
-  z-index: 1;
-  width: 800px;
-  height:600px;
-  position:absolute;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
 }
 
 #InnerDisplayTheCaves2 {
-  margin: auto;
   background-image: url("images/Cave2.jpg");
-  z-index: 2;
-  width: 800px;
-  height:600px;
-  position:absolute;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
 }
 
 #InnerDisplayTheCaves3 {
-  margin: auto;
   background-image: url("images/Cave3.jpg");
-  z-index: 3;
-  width: 800px;
-  height:600px;
-  position:absolute;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
 }
 
 #InnerDisplayTheCaves5 {
-  margin: auto;
   background-image: url("images/Cave5.jpg");
-  z-index: 2;
-  width: 800px;
-  height:600px;
-  position:absolute;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
 }
 
 #InnerDisplayTheCaves8 {
-  margin: auto;
   background-image: url("images/Cave8.jpg");
-  z-index: 2;
+}
+
+.caveDisplayStyling {
+  margin: auto;
   width: 800px;
   height:600px;
   position:absolute;
@@ -372,15 +344,6 @@ body {
   right:0;
   top:0;
   bottom:0;
-}
-
-#hoodedManLongDistance {
-  width: 70px;
-height: 75px;
-position: absolute;
-top: 356px;
-left: 421px;
-opacity: 0.7;
 }
 
 #cave1Right {
@@ -424,12 +387,35 @@ opacity: 0.7;
   cursor: pointer;
 }
 
-#back {
-  width: 100px;
-  height: 100px;
-  line-height: 100px;
-  border-radius: 5px;
+#cave8Forward {
   position: absolute;
+  width: 5%;
+  top: 454px;
+  left: 521px;
+  opacity: 0.4;
+  transform: rotate(147deg);
+}
+
+#cave8Forward:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.backBtn {
+  position: absolute;
+  top: 535px;
+  left: 15px;
+  width: 80px;
+  height: 50px;
+  text-align: center;
   background-color: Black;
   color: White;
+  border-radius: 13px;
+  border: White Solid 0.15em;
+  font-family: monospace;
+  line-height: 50px;
+}
+
+.backBtn:hover {
+  opacity: 0.7;
 }

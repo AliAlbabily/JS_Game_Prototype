@@ -97,16 +97,16 @@ const ROOMS = {
       "The Caves",
       //objectList
       [
-        {
+        { // Cave 1 / index 0
           container: "body",
           elements: [
-            '<div id="InnerDisplayTheCaves"></div>'
+            '<div id="InnerDisplayTheCaves" class="caveDisplayStyling"></div>'
           ],
           selectors: [
             "#InnerDisplayTheCaves"
           ]
         },
-        {
+        { // Cave 1 / objects / index 1
           container: "#InnerDisplayTheCaves",
           elements: [
             '<image src="images/arrow.png" id="cave1Right" draggable="false">',
@@ -117,60 +117,82 @@ const ROOMS = {
             "#cave1Forward"
           ]
         },
-        {
+        { // Cave 2 / index 2
           container: "body",
           elements: [
-            '<div id="InnerDisplayTheCaves2"></div>'
+            '<div id="InnerDisplayTheCaves2" class="caveDisplayStyling"></div>'
           ],
           selectors: [
             "#InnerDisplayTheCaves2"
           ]
         },
-        {
+        { // Cave 2 / objects / index 3
           container: "#InnerDisplayTheCaves2",
           elements: [
             '<image src="images/arrow_forward.png" id="cave2Forward" draggable="false">',
-            '<div>BACK</div>'
+            '<div class="backBtn">BACK</div>'
           ],
           selectors: [
             "#cave2Forward",
-            "#back"
+            ".backBtn"
           ]
         },
-        {
+        { // Cave 5 / index 4
           container: "body",
           elements: [
-            '<div id="InnerDisplayTheCaves5"></div>'
+            '<div id="InnerDisplayTheCaves5" class="caveDisplayStyling"></div>'
           ],
           selectors: [
             "#InnerDisplayTheCaves5"
           ]
         },
-        { // index 5
+        { // Cave 5 / objects / index 5
+            container: "#InnerDisplayTheCaves5",
+            elements: [
+              '<div class="backBtn">BACK</div>'
+            ],
+            selectors: [
+              ".backBtn"
+            ]
+        },
+        { // Cave 8 / index 6
           container: "body",
           elements: [
-            '<div id="InnerDisplayTheCaves8"></div>'
+            '<div id="InnerDisplayTheCaves8" class="caveDisplayStyling"></div>'
           ],
           selectors: [
             "#InnerDisplayTheCaves8"
           ]
         },
-        {
+        { // Cave 8 / objects / index 7
+          container: "#InnerDisplayTheCaves8",
+          elements: [
+            '<image src="images/arrow_forward.png" id="cave8Forward" draggable="false">',
+            '<div class="backBtn">BACK</div>'
+          ],
+          selectors: [
+            "#cave8Forward",
+            ".backBtn"
+          ]
+        },
+        { // Cave 3 / index 8
           container: "body",
           elements: [
-            '<div id="InnerDisplayTheCaves3"></div>'
+            '<div id="InnerDisplayTheCaves3" class="caveDisplayStyling"></div>'
           ],
           selectors: [
             "#InnerDisplayTheCaves3"
           ]
         },
-        {
+        { // Cave 3 / objects / index 9
           container: "#InnerDisplayTheCaves3",
           elements: [
-            '<image src="images/hooded_ghost.png" id="hoodedManLongDistance" draggable="false">'
+            '<image src="images/hooded_ghost.png" id="hoodedManLongDistance" draggable="false">',
+            '<div class="backBtn">BACK</div>'
           ],
           selectors: [
-            "#hoodedManLongDistance"
+            "#hoodedManLongDistance",
+            ".backBtn"
           ]
         }
       ],
