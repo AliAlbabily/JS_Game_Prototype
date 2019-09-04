@@ -6,8 +6,8 @@ class Game {
     this.rooms = ROOMS;
 
     // this.startRoom(shadowing , this.rooms.hallRoom);
-    // startFirstMinigame();
-    startSecondRoom();
+    startFirstMinigame(); //Should not be here, just for testing
+    // startSecondRoom(); //Should not be here, just for testing
   }
 
   // effect (Argument 1) : is an object, ex. {container: "body", elements: ['<div></div>']}

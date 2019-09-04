@@ -30,6 +30,7 @@ function hideEffectObject(effectObject) {
   });
 }
 
+//  FIXME: not correct code inside the fuction
 // 3. Show one element
 function showObject(selector) {
   $(selector).removeClass("hidden");

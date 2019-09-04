@@ -1,7 +1,8 @@
 
 function startSecondRoom() {
   // Remove all objects from previous rooms
-  // removeObject("#InnerDisplayHall");
+  removeObject("#InnerDisplayHall");
+  removeObject("#InnerDisplayMinigamOne");
 
     // Create
     creatObject(secondRoom.objectsList[0]);

@@ -344,6 +344,8 @@ body {
   right:0;
   top:0;
   bottom:0;
+  box-shadow: 0px 0px 30px ghostwhite;
+  border-radius: 10px;
 }
 
 #cave1Right {
