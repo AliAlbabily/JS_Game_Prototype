@@ -1,10 +1,11 @@
 
 function startSecondRoom() {
-  // Remove all objects from previous rooms
-  removeObject("#InnerDisplayHall");
-  removeObject("#InnerDisplayMinigamOne");
-
+  // setTimeout(function() {
+    // Remove all objects from previous rooms
+    removeObject("#InnerDisplayHall");
+    removeObject("#InnerDisplayMinigamOne");
     // Create
+    // FIXME: loop through numbers when creating new objects
     creatObject(secondRoom.objectsList[0]);
     creatObject(secondRoom.objectsList[1]);
     creatObject(secondRoom.objectsList[2]);
@@ -21,27 +22,30 @@ function startSecondRoom() {
     showObjectWithSelector("#InnerDisplayTheCaves");
     // Initial functions
     initialFunctionsSecondRoom();
+  // }, 3000);
 }
 
 
 function initialFunctionsSecondRoom() {
   secondRoom.switchBackgroundImage("images/YGFf.gif", 0);
+  // FIXME: returns error "Uncaught (in promise) DOMException" when played without being delayed in setTimeout
+  // secondRoom.playSoundEffect("Sounds/cave themeb4.ogg", 1, 0);
   showCavesObjects();
   moveForward();
   moveBack();
+  shinyThingIsClicked();
 }
 
 
 function showCavesObjects() {
-  // Caves Buttons
+  // Caves buttons
   showObjectWithSelector("#cave1Right");
   showObjectWithSelector("#cave1Forward");
   showObjectWithSelector("#cave2Forward");
   showObjectWithSelector("#cave8Forward");
-
   showObjectWithSelector(".backBtn");
-  // Other
-  showObjectWithSelector("#hoodedManLongDistance");
+  // Other buttons
+  showObjectWithSelector("#shinyThing");
 }
 
 
@@ -81,6 +85,14 @@ function moveBack() {
   });
 }
 
-let path = ["#InnerDisplayTheCaves"];
 
+function shinyThingIsClicked() {
+  $("#shinyThing").on("click", function() {
+    $(this).remove();
+    showObjectWithSelector("#hoodedManLongDistance");
+  });
+}
+
+
+let path = ["#InnerDisplayTheCaves"];
 const secondRoom = ROOMS.theCaves;

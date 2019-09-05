@@ -53,8 +53,7 @@ function attackEnemyBtnIsClicked() {
     hideObject(".attackEnemyBtn");
     attackEnemy(15);
 
-    // TODO: checks if it is the final hit on Enemy
-    if( hero.getHp() > 0 ) {
+    if( hero.getHp() > 0 && enemy.getHp() > 0 ) {
       if( hero.getHp() > 0 && thresholdsCounter == 1 ) {
         thresholdsCounter++;
         enemyTurn("Activate First Threshold");
@@ -64,10 +63,15 @@ function attackEnemyBtnIsClicked() {
         enemyTurn("Normal attack");
       }
     }
+    else if( hero.getHp() > 0 && enemy.getHp() <= 0 ) {
+      console.log("Stop everything");
+      activateShinyDiv();
+      startSecondRoom();
+    }
     else {
-      console.log("Game Over!");
-      // FIXME: Uncomment this later
-      // startSecondRoom();
+      console.log("Go to next room");
+      activateShinyDiv();
+      startSecondRoom();
     }
   });
 }
@@ -77,8 +81,17 @@ function attackEnemy(damage) {
   let currentHp = enemy.getHp();
   let damageDealt = damage;
   let updatedHp = enemy.setHp(currentHp - damageDealt);
-  updateEnemyHp(updatedHp);
-  updateBattleStatus("Daboius took: " + damage + " damage!", 0, "#958484");
+
+  // Check if it is the final hit on Enemy
+  if ( currentHp <= damageDealt ) {
+    console.log("You Win");
+    updateEnemyHp(updatedHp);
+    updateBattleStatus("Daboius took: " + damage + " damage!", 0, "#958484");
+  }
+  else {
+    updateEnemyHp(updatedHp);
+    updateBattleStatus("Daboius took: " + damage + " damage!", 0, "#958484");
+  }
 }
 
 
@@ -92,12 +105,22 @@ function printAllCharactersHp() {
 
 
 function updateHeroHp(newHp) {
-  $(".heroHp").text("Hero's HP: " + newHp);
+  if (newHp < 0) {
+    $(".heroHp").text("Hero's HP: " + 0);
+  }
+  else {
+    $(".heroHp").text("Hero's HP: " + newHp);
+  }
 }
 
 
 function updateEnemyHp(newHp) {
-  $(".enemyHp").text("Enemy's HP: " + newHp);
+  if ( newHp < 0) {
+    $(".enemyHp").text("Enemy's HP: " + 0);
+  }
+  else {
+    $(".enemyHp").text("Enemy's HP: " + newHp);
+  }
 }
 
 
@@ -120,7 +143,7 @@ function enemyTurn(choosenCase) {
   }
 }
 
-
+// TODO: remove "attackEnemyBtn" when hero is dead
 function enemyAttacks() {
   setTimeout( function() {
     showObject(".attackEnemyBtn");
@@ -128,10 +151,21 @@ function enemyAttacks() {
     let currentHp = hero.getHp();
     let damageDealt = 10;
     let updatedHp = hero.setHp(currentHp - damageDealt);
-    updateHeroHp(updatedHp);
-    updateBattleStatus("You took: " + damageDealt + " damage!", 0, "Red");
 
-    enemyAttackingEffects();
+    if(currentHp <= damageDealt) {
+      updateHeroHp(updatedHp);
+      updateBattleStatus("You took: " + damageDealt + " damage!", 0, "Red");
+      enemyAttackingEffects();
+      setTimeout( function() {
+        activateYouDiedScreen();
+        console.log("You Died!!");
+      }, 1000);
+    }
+    else {
+      updateHeroHp(updatedHp);
+      updateBattleStatus("You took: " + damageDealt + " damage!", 0, "Red");
+      enemyAttackingEffects();
+    }
   }, 1500);
 }
 
@@ -183,7 +217,7 @@ function switchBackgroundColor() {
   }, 50);
 }
 
-
+// TODO: remove "attackEnemyBtn" when hero is dead
 function enemyAttacksWithSunFire() {
   setTimeout( function() {
     showObject(".attackEnemyBtn");
@@ -191,8 +225,20 @@ function enemyAttacksWithSunFire() {
     let currentHp = hero.getHp();
     let damageDealt = 20;
     let updatedHp = hero.setHp(currentHp - damageDealt);
-    updateHeroHp(updatedHp);
-    updateBattleStatus("Dabious attacked you with SunFire!! You took: " + damageDealt + " damage!", 0, "Red");
+
+    // Check if it is the final hit on Hero
+    if( currentHp <= damageDealt ) {
+      updateHeroHp(updatedHp);
+      updateBattleStatus("Dabious attacked you with SunFire!! You took: " + damageDealt + " damage!", 0, "Red");
+      setTimeout( function() {
+        activateYouDiedScreen();
+        console.log("You Died!!");
+      }, 2000);
+    }
+    else {
+      updateHeroHp(updatedHp);
+      updateBattleStatus("Dabious attacked you with SunFire!! You took: " + damageDealt + " damage!", 0, "Red");
+    }
 
     switchBackgroundImageWithEffects("images/burning_sun.gif");
     firstMinigame.playSoundEffect("Sounds/Comet.mp3", 0.06, 0);
@@ -213,6 +259,22 @@ function switchBackgroundImageWithEffects(src) {
     document.body.style.transition = " all 1s";
     document.body.style.transitionDelay = " 0s";
   }, 1400);
+}
+
+
+function activateShinyDiv() {
+  var shinyDiv = '<div id="shinyDiv" class="hidden"></div>';
+  $("body").append(shinyDiv);
+  $("#shinyDiv").fadeIn(3000).fadeOut(3000);
+}
+
+
+function activateYouDiedScreen() {
+  // FIXME: <p> element is neither positioned correctly nor responsive
+  // TODO: add a Sound effect on death
+  let youDied = '<div id="youDied" class="hidden"><p>YOU DIED</p></div>';
+  $("body").append(youDied);
+  $("#youDied").fadeIn('slow');
 }
 
 

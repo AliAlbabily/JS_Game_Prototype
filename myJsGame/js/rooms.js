@@ -84,7 +84,7 @@ const ROOMS = {
       //characters
       [
         new Hero("Hero", 40),
-        new Enemy("Badious", 30)
+        new Enemy("Dadious", 20)
       ],
       //initFunction
       function() {
@@ -149,10 +149,12 @@ const ROOMS = {
         { // Cave 5 / objects / index 5
             container: "#InnerDisplayTheCaves5",
             elements: [
-              '<div class="backBtn">BACK</div>'
+              '<div class="backBtn">BACK</div>',
+              '<img src="images/shining thing.gif" id="shinyThing" draggable="false">'
             ],
             selectors: [
-              ".backBtn"
+              ".backBtn",
+              '#shinyThing'
             ]
         },
         { // Cave 8 / index 6

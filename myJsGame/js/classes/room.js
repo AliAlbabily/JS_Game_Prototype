@@ -33,19 +33,19 @@ class Room {
   }
 
 
-  // Not used
-  // showHand() {
-  //   $("#monsterHand").animate({
-  //     left: "-100"
-  //   }, 1800);
-  // }
-
-
   switchBackgroundImage(src, delay) {
     setTimeout(function() {
       document.body.style.background = `#f3f3f3 url(${src})`; //`#f3f3f3 url(${src}) no-repeat 100%`
       document.body.style.backgroundSize = "cover";
     }, delay);
+  }
+
+
+  zoomingInEffect(objectClicked, currentArea, zoomedInArea) {
+    $(objectClicked).on("click", function() {
+      $(currentArea).addClass("hidden");
+      $(zoomedInArea).removeClass("hidden");
+    });
   }
 
 }

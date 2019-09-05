@@ -49,3 +49,11 @@ class MinigameOne extends Minigame {
 }
 
 const minigameone = new MinigameOne();
+
+/****************************** Unused function ***********************************/
+
+// showHand() {
+//   $("#monsterHand").animate({
+//     left: "-100"
+//   }, 1800);
+// }
