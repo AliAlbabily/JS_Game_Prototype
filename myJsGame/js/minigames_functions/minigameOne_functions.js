@@ -6,8 +6,9 @@ function startFirstMinigame() {
     // Remove all objects from previous room
     removeObject("#InnerDisplayHall");
     // Create
-    creatObject(firstMinigame.objectsList[0]);
-    creatObject(firstMinigame.objectsList[1]);
+    for(let i = 0; i < firstMinigame.objectsList.length; i++) {
+      creatObject(firstMinigame.objectsList[i]);
+    }
     // Hide
     hideObjects(firstMinigame.objectsList);
     // Show
