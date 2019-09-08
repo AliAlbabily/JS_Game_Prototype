@@ -84,7 +84,7 @@ const ROOMS = {
       //characters
       [
         new Hero("Hero", 40),
-        new Enemy("Dadious", 20)
+        new Enemy("Dadious", 30)
       ],
       //initFunction
       function() {
@@ -195,6 +195,24 @@ const ROOMS = {
           selectors: [
             "#hoodedManLongDistance",
             ".backBtn"
+          ]
+        },
+        { // Cave 3 - Zoomed in / Objects / index 10
+          container: "body",
+          elements: [
+            '<div id="Cave3ZoomedIn" class="caveDisplayStyling"></div>'
+          ],
+          selectors: [
+            "#Cave3ZoomedIn"
+          ]
+        },
+        { // Cave 3 - Zoomed in / Objects / index 11
+          container: "#Cave3ZoomedIn",
+          elements: [
+            '<image src="images/HoodedMan.png" id="HoodedMan" draggable="false">'
+          ],
+          selectors: [
+            "#HoodedMan"
           ]
         }
       ],

@@ -331,6 +331,10 @@ body {
   background-image: url("images/Cave3.jpg");
 }
 
+#Cave3ZoomedIn {
+  background-image: url("images/Cave3ZoomedIn.jpg");
+}
+
 #InnerDisplayTheCaves5 {
   background-image: url("images/Cave5.jpg");
 }
@@ -431,6 +435,13 @@ body {
   width: 5%;
   top: 456px;
   left: 560px;
+}
+
+#HoodedMan {
+  position: absolute;
+  transform: scaleX(-1);
+  top: 80px;
+  left: 400px;
 }
 
 #shinyDiv {

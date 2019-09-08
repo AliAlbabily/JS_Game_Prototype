@@ -1,6 +1,6 @@
 
 function startSecondRoom() {
-  // setTimeout(function() {
+  setTimeout(function() {
     // Remove all objects from previous rooms
     removeObject("#InnerDisplayHall");
     removeObject("#InnerDisplayMinigamOne");
@@ -16,24 +16,27 @@ function startSecondRoom() {
     creatObject(secondRoom.objectsList[7]);
     creatObject(secondRoom.objectsList[8]);
     creatObject(secondRoom.objectsList[9]);
+    creatObject(secondRoom.objectsList[10]);
+    creatObject(secondRoom.objectsList[11]);
     // Hide
     hideObjects(secondRoom.objectsList);
     // Show
     showObjectWithSelector("#InnerDisplayTheCaves");
     // Initial functions
     initialFunctionsSecondRoom();
-  // }, 3000);
+  }, 3000);
 }
 
 
 function initialFunctionsSecondRoom() {
   secondRoom.switchBackgroundImage("images/YGFf.gif", 0);
   // FIXME: returns error "Uncaught (in promise) DOMException" when played without being delayed in setTimeout
-  // secondRoom.playSoundEffect("Sounds/cave themeb4.ogg", 1, 0);
+  secondRoom.playSoundEffect("Sounds/cave themeb4.ogg", 1, 0);
   showCavesObjects();
   moveForward();
   moveBack();
   shinyThingIsClicked();
+  secondRoom.zoomingInEffect("#hoodedManLongDistance", "#InnerDisplayTheCaves3", "#Cave3ZoomedIn");
 }
 
 
@@ -46,6 +49,7 @@ function showCavesObjects() {
   showObjectWithSelector(".backBtn");
   // Other buttons
   showObjectWithSelector("#shinyThing");
+  showObjectWithSelector("#HoodedMan");
 }
 
 
