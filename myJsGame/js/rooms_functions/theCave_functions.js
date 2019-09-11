@@ -97,7 +97,7 @@ function speakToHoodedMan() {
     if(clicks < 1) {
       showObject(".speakingBubbleContainer");
       showObjectWithSelector(".speakingBubbleText2");
-      hoodedMan.speak(ROOMS.theCaves.dialogs[0]);
+      hoodedMan.speak(".speakingBubbleText2", ROOMS.theCaves.dialogs[0]);
     }
     clicks++;
   });
@@ -112,7 +112,7 @@ function nextDialog2() {
     }
     else {
       room.playSoundEffect("Sounds/MenuSelectionClick.wav", 0.5);
-      character.speak(ROOMS.theCaves.dialogs[index]);
+      character.speak(".speakingBubbleText2", ROOMS.theCaves.dialogs[index]);
       index++;
     }
   });

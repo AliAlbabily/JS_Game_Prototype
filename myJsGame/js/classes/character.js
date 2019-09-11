@@ -5,10 +5,9 @@ class Character {
     this.name = name;
   }
 
-  speak(text) {
+  speak(selectedTextObject, text) {
     console.log(text);
-    // $(".speakingBubbleText").text(text);
-    $(".speakingBubbleText2").text(text);
+    $(selectedTextObject).text(text);
   }
 
   getName() {

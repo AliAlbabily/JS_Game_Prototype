@@ -136,7 +136,7 @@ function secretDoorIsClicked() {
     if (index <= 1) {
       showObject(".speakingBubbleWrapper");
       showObject(".speakingBubbleText");
-      character.speak(ROOMS.hallRoom.dialogs[0]);
+      character.speak(".speakingBubbleText", ROOMS.hallRoom.dialogs[0]);
     }
     // When the speakingBubble is gone, you will be able to enter next room
     if (index >= 2 && window.getComputedStyle(x).display === "none") {
@@ -161,7 +161,7 @@ function nextDialog() {
     }
     else {
       room.playSoundEffect("Sounds/MenuSelectionClick.wav", 0.5);
-      character.speak(ROOMS.hallRoom.dialogs[index]);
+      character.speak(".speakingBubbleText", ROOMS.hallRoom.dialogs[index]);
       index++;
     }
   });
