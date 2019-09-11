@@ -27,6 +27,8 @@ function initialFunctionsSecondRoom() {
   moveBack();
   shinyThingIsClicked();
   secondRoom.zoomingInEffect("#hoodedManLongDistance", "#InnerDisplayTheCaves3", "#Cave3ZoomedIn");
+  speakToHoodedMan();
+  nextDialog2();
 }
 
 
@@ -37,7 +39,7 @@ function showCavesObjects() {
   showObjectWithSelector("#cave2Forward");
   showObjectWithSelector("#cave8Forward");
   showObjectWithSelector(".backBtn");
-  // Other buttons
+  // Other stuff
   showObjectWithSelector("#shinyThing");
   showObjectWithSelector("#HoodedMan");
 }
@@ -88,5 +90,36 @@ function shinyThingIsClicked() {
 }
 
 
+function speakToHoodedMan() {
+  let clicks = 0;
+
+  $("#HoodedMan").on("click", function() {
+    if(clicks < 1) {
+      showObject(".speakingBubbleContainer");
+      showObjectWithSelector(".speakingBubbleText2");
+      hoodedMan.speak(ROOMS.theCaves.dialogs[0]);
+    }
+    clicks++;
+  });
+}
+
+function nextDialog2() {
+  let index = 1;
+
+  $(".speakingBubbleContainer").on("click", function(){
+    if( index >= ROOMS.theCaves.dialogs.length ) {
+      hideObject(".speakingBubbleContainer");
+    }
+    else {
+      room.playSoundEffect("Sounds/MenuSelectionClick.wav", 0.5);
+      character.speak(ROOMS.theCaves.dialogs[index]);
+      index++;
+    }
+  });
+}
+
+
 let path = ["#InnerDisplayTheCaves"];
+
+const hoodedMan = ROOMS.theCaves.characters[0];
 const secondRoom = ROOMS.theCaves;

@@ -7,7 +7,8 @@ class Character {
 
   speak(text) {
     console.log(text);
-    $(".speakingBubbleText").text(text);
+    // $(".speakingBubbleText").text(text);
+    $(".speakingBubbleText2").text(text);
   }
 
   getName() {

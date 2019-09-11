@@ -209,15 +209,23 @@ const ROOMS = {
         { // Cave 3 - Zoomed in / Objects / index 11
           container: "#Cave3ZoomedIn",
           elements: [
-            '<image src="images/HoodedMan.png" id="HoodedMan" draggable="false">'
+            '<image src="images/HoodedMan.png" id="HoodedMan" draggable="false">',
+            '<div class="speakingBubbleContainer"><p class="speakingBubbleText2"></p></div>'
           ],
           selectors: [
-            "#HoodedMan"
+            "#HoodedMan",
+            ".speakingBubbleContainer",
+            ".speakingBubbleText2"
           ]
         }
       ],
       //dialogs
-      ["haha"],
+      [
+        "I'm not here for that thing you just took..",
+        "There is something else I wanted to speak with you about..",
+        "As you can see behind me lies the exit of this area. But before you keep on your journey, I want to warn you of something dangerous that you might encounter further ahead. Just keep moving when you see shadows..",
+        "Goodluck..."
+      ],
       //characters
       [
         new Character("Hooded Person")
