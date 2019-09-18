@@ -1,6 +1,7 @@
 
 function startSecondRoom() {
-  // setTimeout(function() {
+  // Start content manipulation after 3 sec.
+  setTimeout(function() {
     // Remove all objects from previous rooms
     removeObject("#InnerDisplayHall");
     removeObject("#InnerDisplayMinigamOne");
@@ -11,17 +12,17 @@ function startSecondRoom() {
     // Hide
     hideObjects(secondRoom.objectsList);
     // Show
-    showObjectWithSelector("#InnerDisplayTheCaves");
+    showObject(secondRoom.objectsList[0].selectors[0]);
     // Initial functions
     initialFunctionsSecondRoom();
-  // }, 3000);
+  }, 3000);
 }
 
 
 function initialFunctionsSecondRoom() {
   secondRoom.switchBackgroundImage("images/YGFf.gif", 0);
   // FIXME: returns error "Uncaught (in promise) DOMException" when played without being delayed in setTimeout
-  // secondRoom.playSoundEffect("Sounds/cave themeb4.ogg", 1, 0);
+  secondRoom.playSoundEffect("Sounds/cave themeb4.ogg", 1, 0);
   showCavesObjects();
   moveForward();
   moveBack();
@@ -33,15 +34,15 @@ function initialFunctionsSecondRoom() {
 
 
 function showCavesObjects() {
-  // Caves buttons
-  showObjectWithSelector("#cave1Right");
-  showObjectWithSelector("#cave1Forward");
-  showObjectWithSelector("#cave2Forward");
-  showObjectWithSelector("#cave8Forward");
-  showObjectWithSelector(".backBtn");
+  // Caves direction buttons
+  showObject("#cave1Right");
+  showObject("#cave1Forward");
+  showObject("#cave2Forward");
+  showObject("#cave8Forward");
+  showObject(".backBtn");
   // Other stuff
-  showObjectWithSelector("#shinyThing");
-  showObjectWithSelector("#HoodedMan");
+  showObject("#shinyThing");
+  showObject("#HoodedMan");
 }
 
 
@@ -85,7 +86,7 @@ function moveBack() {
 function shinyThingIsClicked() {
   $("#shinyThing").on("click", function() {
     $(this).remove();
-    showObjectWithSelector("#hoodedManLongDistance");
+    showObject("#hoodedManLongDistance");
   });
 }
 
@@ -96,12 +97,13 @@ function speakToHoodedMan() {
   $("#HoodedMan").on("click", function() {
     if(clicks < 1) {
       showObject(".speakingBubbleContainer");
-      showObjectWithSelector(".speakingBubbleText2");
+      showObject(".speakingBubbleText2");
       hoodedMan.speak(".speakingBubbleText2", ROOMS.theCaves.dialogs[0]);
     }
     clicks++;
   });
 }
+
 
 function nextDialog2() {
   let index = 1;
@@ -112,7 +114,7 @@ function nextDialog2() {
     }
     else {
       room.playSoundEffect("Sounds/MenuSelectionClick.wav", 0.5);
-      character.speak(".speakingBubbleText2", ROOMS.theCaves.dialogs[index]);
+      hoodedMan.speak(".speakingBubbleText2", ROOMS.theCaves.dialogs[index]);
       index++;
     }
   });

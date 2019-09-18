@@ -187,24 +187,24 @@ body {
 .speakingBubbleWrapper {
   position: absolute;
   z-index: 2;
-  left: 290px;
-  bottom: 320px;
-  width: 250px;
-  height: 250px;
-  background-image: url('images/speakingBubble.png');
-  background-repeat:no-repeat;
-  background-color: transparent;
+  left: 260px;
+  bottom: 360px;
+  width: 230px;
+  min-height: 50px;
+  max-height: fit-content;
+  background-color: Black;
+  padding: 10px;
+  border-radius: 12px;
+  border: White Solid 1px;
 }
 
 .speakingBubbleText {
-  position: absolute;
-  width: 215px;
-  top: 40px;
-  left: 20px;
   color: White;
   white-space: pre-line;
   word-wrap: break-word;
   user-select: none;  /* <-- Use a better solution than this! */
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /******************************************************************************/

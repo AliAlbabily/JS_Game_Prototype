@@ -34,8 +34,8 @@ const ROOMS = {
       //dialogs
       ["STOP RIGHT THERE!!",
       "I need to tell you something before you enter that place...",
-      "My name is YoraLina and I'm the headmaster of this place...",
-      "Now you may go ahead and don't forget to be careful out there..."],
+      "My name is YoraLina and I'm the headmaster of this mansion...",
+      "Now you may go ahead but don't forget to be careful out there..."],
       //characters
       [new Character("Yoralina")],
       //initFunction
@@ -84,7 +84,7 @@ const ROOMS = {
       //characters
       [
         new Hero("Hero", 40),
-        new Enemy("Dadious", 30)
+        new Enemy("Dadious", 40)
       ],
       //initFunction
       function() {
@@ -197,7 +197,7 @@ const ROOMS = {
             ".backBtn"
           ]
         },
-        { // Cave 3 - Zoomed in / Objects / index 10
+        { // Cave 3 - Zoomed in / index 10
           container: "body",
           elements: [
             '<div id="Cave3ZoomedIn" class="caveDisplayStyling"></div>'

@@ -1,8 +1,7 @@
 
 function startFirstMinigame() {
   // Start content manipulation after 3 sec.
-  // FIXME: Uncomment this later
-  // setTimeout(function() {
+  setTimeout(function() {
     // Remove all objects from previous room
     removeObject("#InnerDisplayHall");
     // Create
@@ -16,17 +15,14 @@ function startFirstMinigame() {
     showObject(firstMinigame.objectsList[1].selectors[1]);
     showObject(firstMinigame.objectsList[1].selectors[2]);
     showObject(firstMinigame.objectsList[1].selectors[3]);
-  // FIXME: Uncomment this later
-  // }, 3000);
-
-  // Initial functions
-  initialFunctionsMinigameOne();
+    // Initial functions
+    initialFunctionsMinigameOne();
+  }, 3000);
 }
 
 
 function initialFunctionsMinigameOne() {
-  // FIXME: Uncomment this later
-  firstMinigame.switchBackgroundImage("images/F43kZP.gif", 0); // was 3000 before !!
+  firstMinigame.switchBackgroundImage("images/F43kZP.gif", 0);
   startBattleBtnIsClicked();
 }
 

@@ -1,6 +1,6 @@
 
-// HTML-elements manipulation consists of three main steps
-// 1. Create all elements -> 2. Hide elements -> 3. Show elements
+// HTML-elements manipulation in this project consists of three main steps
+// 1. Create elements -> 2. Hide elements -> 3. Show elements
 
 // 1. Create all elements stored inside an object
 function creatObject(screenObject) {
@@ -30,14 +30,8 @@ function hideEffectObject(effectObject) {
   });
 }
 
-//  FIXME: not correct code inside the fuction
 // 3. Show one element
 function showObject(selector) {
-  $(selector).removeClass("hidden");
-}
-
-// 3. Show one element
-function showObjectWithSelector(selector) {
   $(selector).removeClass("hidden");
 }
 

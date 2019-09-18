@@ -136,7 +136,7 @@ function secretDoorIsClicked() {
     if (index <= 1) {
       showObject(".speakingBubbleWrapper");
       showObject(".speakingBubbleText");
-      character.speak(".speakingBubbleText", ROOMS.hallRoom.dialogs[0]);
+      yoralina.speak(".speakingBubbleText", ROOMS.hallRoom.dialogs[0]);
     }
     // When the speakingBubble is gone, you will be able to enter next room
     if (index >= 2 && window.getComputedStyle(x).display === "none") {
@@ -161,11 +161,11 @@ function nextDialog() {
     }
     else {
       room.playSoundEffect("Sounds/MenuSelectionClick.wav", 0.5);
-      character.speak(".speakingBubbleText", ROOMS.hallRoom.dialogs[index]);
+      yoralina.speak(".speakingBubbleText", ROOMS.hallRoom.dialogs[index]);
       index++;
     }
   });
 }
 
-const character = ROOMS.hallRoom.characters[0];
+const yoralina = ROOMS.hallRoom.characters[0];
 const room = ROOMS.hallRoom;

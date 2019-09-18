@@ -5,9 +5,9 @@ class Game {
     // "ROOMS" is an object existing in "room.js"
     this.rooms = ROOMS;
 
-    // this.startRoom(shadowing , this.rooms.hallRoom);
+    this.startRoom(shadowing , this.rooms.hallRoom);
     // startFirstMinigame(); //Should not be here, just for testing
-    startSecondRoom(); //Should not be here, just for testing
+    // startSecondRoom(); //Should not be here, just for testing
   }
 
   // effect (Argument 1) : is an object, ex. {container: "body", elements: ['<div></div>']}
