@@ -6,4 +6,4 @@
 
 # First Step
 
-When you see the first stage on the screen, press "h" using your keyboard then press "Enter" key to proceed . If you enter something worng a red pair of eyes will appear on the character.
+When you see the first stage on the screen, press "h" using your keyboard then press "Enter" key to proceed . If you enter a wrong pass a red pair of eyes will immediately appear on the character.
