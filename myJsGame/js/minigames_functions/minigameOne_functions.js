@@ -267,11 +267,13 @@ function activateShinyDiv() {
 
 
 function activateYouDiedScreen() {
-  // FIXME: <p> element is neither positioned correctly nor responsive
   // TODO: add a Sound effect on death
-  let youDied = '<div id="youDied" class="hidden"><p>YOU DIED</p></div>';
+  // TODO: Add functionality to "tryAgain-btn"
+  let youDied = '<div id="youDied" class="hidden"><div><p>YOU DIED</p></div><div><div class="tryAgain-btn">Try Again</div></div></div>';
   $("body").append(youDied);
-  $("#youDied").fadeIn('slow');
+  $('#youDied').animate({
+    opacity: 1
+  }, 'slow');
 }
 
 

@@ -307,6 +307,7 @@ body {
 }
 
 #youDied {
+  opacity: 0;
   background-color: #00000082;
   position: fixed;
   width: 100%;
@@ -314,7 +315,48 @@ body {
   top: 0;
   color: Red;
   font-size: 15em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#youDied div:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  align-items: center;
   text-align: center;
+}
+
+#youDied div:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  align-items: center;
+  padding: 30px;
+}
+
+#youDied div p {
+  margin-bottom: unset;
+  margin-top: unset;
+}
+
+.tryAgain-btn {
+  width: 140px;
+  height: 70px;
+  background-color: #ab3d3d70;
+  color: #ff0000;
+  line-height: 70px;
+  font-family: fantasy;
+  font-size: 20px;
+  border-radius: 25px;
+  border: solid 1.5px #ff0000;
+}
+
+.tryAgain-btn:hover {
+  background-color: #6b3f3f70;
+  cursor: pointer;
 }
 
 /******************************************************************************/
