@@ -24,6 +24,7 @@ function startFirstMinigame() {
 function initialFunctionsMinigameOne() {
   firstMinigame.switchBackgroundImage("images/F43kZP.gif", 0);
   startBattleBtnIsClicked();
+  restartFirstMinigame();
 }
 
 
@@ -268,12 +269,35 @@ function activateShinyDiv() {
 
 function activateYouDiedScreen() {
   // TODO: add a Sound effect on death
-  // TODO: Add functionality to "tryAgain-btn"
   let youDied = '<div id="youDied" class="hidden"><div><p>YOU DIED</p></div><div><div class="tryAgain-btn">Try Again</div></div></div>';
   $("body").append(youDied);
   $('#youDied').animate({
     opacity: 1
   }, 'slow');
+}
+
+
+function restartFirstMinigame() {
+  $(document).on("click", ".tryAgain-btn", function() {
+    // Remove current objects
+    removeObject("#youDied");
+    removeObject("#InnerDisplayMinigamOne");
+    // Create
+    for(let i = 0; i < firstMinigame.objectsList.length; i++) {
+      creatObject(firstMinigame.objectsList[i]);
+    }
+    // Hide
+    hideObjects(firstMinigame.objectsList);
+    // Show
+    showObject(firstMinigame.objectsList[1].selectors[0]);
+    showObject(firstMinigame.objectsList[1].selectors[1]);
+    showObject(firstMinigame.objectsList[1].selectors[2]);
+    showObject(firstMinigame.objectsList[1].selectors[3]);
+    // Reset Hero's Hp
+    updateHeroHp(hero.setHp(50));
+    // Reset Enemy's Hp
+    updateEnemyHp(enemy.setHp(50));
+  });
 }
 
 
