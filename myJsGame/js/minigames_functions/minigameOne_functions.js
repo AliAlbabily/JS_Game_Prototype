@@ -50,7 +50,7 @@ function attackEnemyBtnIsClicked() {
   $(".attackEnemyBtn").on("click", function() {
     hideObject(".attackEnemyBtn");
     attackEnemy(15);
-
+    console.log("number of clicks: " + thresholdsCounter);
     if( hero.getHp() > 0 && enemy.getHp() > 0 ) {
       if( hero.getHp() > 0 && thresholdsCounter == 1 ) {
         thresholdsCounter++;
@@ -62,13 +62,13 @@ function attackEnemyBtnIsClicked() {
       }
     }
     else if( hero.getHp() > 0 && enemy.getHp() <= 0 ) {
-      console.log("Stop everything");
       activateShinyDiv();
+      // Go to next room
       startSecondRoom();
     }
     else {
-      console.log("Go to next room");
       activateShinyDiv();
+      // Go to next room
       startSecondRoom();
     }
   });
