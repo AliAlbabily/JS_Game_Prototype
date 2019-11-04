@@ -113,7 +113,7 @@ function nextDialog2() {
       hideObject(".speakingBubbleContainer");
     }
     else {
-      room.playSoundEffect("Sounds/MenuSelectionClick.wav", 0.5);
+      secondRoom.playSoundEffect("Sounds/MenuSelectionClick.wav", 0.5);
       hoodedMan.speak(".speakingBubbleText2", ROOMS.theCaves.dialogs[index]);
       index++;
     }

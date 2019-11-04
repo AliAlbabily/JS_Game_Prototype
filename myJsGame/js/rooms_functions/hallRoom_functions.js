@@ -1,20 +1,10 @@
 
 function initialFunctions() {
-  bodyBackground();
+  firstRoom.switchBackgroundImage("images/GloomyEvilBordercollie-small.gif", 0);
   enterPassword();
   secretDoorIsClicked();
   nextDialog();
 }
-
-
-function bodyBackground() {
-  $('body').css({
-		'background-image' : 'url(images/GloomyEvilBordercollie-small.gif)',
-		'background-repeat' : 'no-repeat',
-		'background-size' : '100%'
-	});
-}
-
 
 function enterPassword() {
   let keyPhrase = [];
@@ -55,10 +45,10 @@ function enterPassword() {
 	$(document).on("keyup", function(event) {
 		event.preventDefault();
 		if (event.keyCode === 13) {
-			if ( keyPhrase[0] == "h" ) { //&& keyPhrase[1] == "e" && keyPhrase[2] == "l" && keyPhrase[3] == "l" && keyPhrase[4] == "o"
+			if ( keyPhrase[0].includes("h") ) {
 		    console.log("Door Unlocked");
 
-        room.playSoundEffect("Sounds/Panic-Mike_Koenig-717059030.mp3", 0.5);
+        firstRoom.playSoundEffect("Sounds/Panic-Mike_Koenig-717059030.mp3", 0.5);
 
 				/*Set glitchy background*/
 				$('body').css({
@@ -83,7 +73,7 @@ function enterPassword() {
 		  }
 		  else {
 	      console.log("Try again!");
-				room.playSoundEffect("Sounds/lose sound 2 - 1_0.wav", 1);
+				firstRoom.playSoundEffect("Sounds/lose sound 2 - 1_0.wav", 1);
 				$("#RedEyes").fadeIn(900).fadeOut(900);
 				keyPhrase.splice(0, keyPhrase.length);
 		  }
@@ -112,7 +102,7 @@ function showSecretPortal() {
 
 function nextRoomEffect() {
   $("#shadowing").fadeIn(3000).fadeOut(3000);
-  room.playSoundEffect("Sounds/echo-whoosh 0.5.wav", 0.5);
+  firstRoom.playSoundEffect("Sounds/echo-whoosh 0.5.wav", 0.5);
   removeMainDisplay();
 }
 
@@ -160,7 +150,7 @@ function nextDialog() {
       hideObject(".speakingBubbleWrapper");
     }
     else {
-      room.playSoundEffect("Sounds/MenuSelectionClick.wav", 0.5);
+      firstRoom.playSoundEffect("Sounds/MenuSelectionClick.wav", 0.5);
       yoralina.speak(".speakingBubbleText", ROOMS.hallRoom.dialogs[index]);
       index++;
     }
@@ -168,4 +158,4 @@ function nextDialog() {
 }
 
 const yoralina = ROOMS.hallRoom.characters[0];
-const room = ROOMS.hallRoom;
+const firstRoom = ROOMS.hallRoom;
