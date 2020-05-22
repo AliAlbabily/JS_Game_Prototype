@@ -16,12 +16,13 @@ class Game {
     // Create
     creatObject(room.objectsList[0]);
     creatObject(room.objectsList[1]);
-    creatObject(effect);
+    creatObject(effect);  // Not sure what this is for ??
     // Hide
-    hideEffectObject(shadowing);
+    hideEffectObject(shadowing);  // Not sure what this is for ??
     hideObjects(room.objectsList);
     // Show
     showObject(room.objectsList[0].selectors[0]);
+    showObject(room.objectsList[0].selectors[5]);
     // Initial functions
     initialFunctions();
   }

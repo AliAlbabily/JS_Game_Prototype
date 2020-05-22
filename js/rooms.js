@@ -11,14 +11,17 @@ const ROOMS = {
             '<img src="images/lyrica.png" class="lyrica" draggable="false">',
             '<img src="images/268676961000211.png" id="RedEyes" draggable="false">',
             '<div class="secretDoorContainer"></div>',
-            '<div class="speakingBubbleWrapper"><p class="speakingBubbleText"></p></div>'
+            '<div class="speakingBubbleWrapper"><p class="speakingBubbleText"></p></div>',
+            '<div class="text-input-container"><span>Enter the password: (hello)</span><br><input class="text-input" type="text"></div>'
           ],
           selectors: [
             ".lyrica",
             "#RedEyes",
             ".secretDoorContainer",
             ".speakingBubbleWrapper",
-            ".speakingBubbleText"
+            ".speakingBubbleText",
+            ".text-input-container",
+            "text-input"
           ]
         },
         {

@@ -7,12 +7,12 @@ function initialFunctions() {
 }
 
 function enterPassword() {
-  let keyPhrase = [];
+	let keyPhrase = [];
 
-	$(document).keyup(function(e) {
+	$(".text-input").keyup(function(e) {
 		//find out which key was pressed
 		switch(e.keyCode) {
-			case 65	:	console.log('a'); keyPhrase.push("a"); break;	// a
+			case 65	:	console.log('a'); 	keyPhrase.push("a"); break;	// a
 			case 66	:	console.log('b');	keyPhrase.push("b"); break;	// b
 			case 67	:	console.log('c');	keyPhrase.push("c"); break;	// c
 			case 68	:	console.log('d');	keyPhrase.push("d"); break;	// d
@@ -29,7 +29,7 @@ function enterPassword() {
 			case 79	:	console.log('o');	keyPhrase.push("o"); break;	// o
 			case 80	:	console.log('p');	keyPhrase.push("p"); break;	// p
 			case 81	:	console.log('q');	keyPhrase.push("q"); break;	// q
-			case 82	:	console.log('r'); keyPhrase.push("r"); break;	// r
+			case 82	:	console.log('r'); 	keyPhrase.push("r"); break;	// r
 			case 83	:	console.log('s');	keyPhrase.push("s"); break;	// s
 			case 84	:	console.log('t');	keyPhrase.push("t"); break;	// t
 			case 85	:	console.log('u');	keyPhrase.push("u"); break;	// u
@@ -39,24 +39,27 @@ function enterPassword() {
 			case 89	:	console.log('y');	keyPhrase.push("y"); break;	// y
 			case 90	:	console.log('z');	keyPhrase.push("z"); break;	// z
 		}
-	  console.log(keyPhrase.join(''));
+		console.log(keyPhrase.join(''));
 	});
 
-	$(document).on("keyup", function(event) {
+	$(".text-input").on("keyup", function(event) {
 		event.preventDefault();
+		let newString = keyPhrase.join('');;
+		console.log("String: " + newString);
+		
 		if (event.keyCode === 13) {
-			if ( keyPhrase[0].includes("h") ) {
-		    console.log("Door Unlocked");
+			if ( newString === "hello" ) {
+				console.log("Door Unlocked");
+				removeObject(".text-input-container");
 
-        firstRoom.playSoundEffect("Sounds/Panic-Mike_Koenig-717059030.mp3", 0.5);
+				firstRoom.playSoundEffect("Sounds/Panic-Mike_Koenig-717059030.mp3", 0.5);
 
 				/*Set glitchy background*/
 				$('body').css({
-  				'background-image' : 'url(images/Static.gif.134cc0b6ab209a478edfaa338f3c3973.gif)',
-  				'background-repeat' : 'no-repeat',
-  				'background-size' : '100%'
-  			});
-
+					'background-image' : 'url(images/Static.gif.134cc0b6ab209a478edfaa338f3c3973.gif)',
+					'background-repeat' : 'no-repeat',
+					'background-size' : '100%'
+				});
 				/*Set back normal background after 2.5sec */
 				setTimeout(function() {
 					$('body').css({
@@ -64,19 +67,22 @@ function enterPassword() {
 						'background-repeat' : 'no-repeat',
 						'background-size' : '100%'
 					});
-    		}, 2500);
+				}, 2500);
 
 				showSecretPortal();
 
 				$(document).off("keyup");
 				keyPhrase.splice(0, keyPhrase.length);
-		  }
-		  else {
-	      console.log("Try again!");
+			}
+			else {
+				console.log("Try again!");
 				firstRoom.playSoundEffect("Sounds/lose sound 2 - 1_0.wav", 1);
 				$("#RedEyes").fadeIn(900).fadeOut(900);
+				// empty text from the input
+				
+				// empty the list
 				keyPhrase.splice(0, keyPhrase.length);
-		  }
+			}
 		}
 	});
 }
