@@ -37,7 +37,7 @@ const ROOMS = {
       //dialogs
       ["STOP RIGHT THERE!!",
       "I need to tell you something before you enter that place...",
-      "My name is YoraLina and I'm the headmaster of this mansion...",
+      "My name is Rebecca and I'm the headmaster of this mansion. The road that your are about take is full of all kind of dangers..",
       "Now you may go ahead but don't forget to be careful out there..."],
       //characters
       [new Character("Yoralina")],
